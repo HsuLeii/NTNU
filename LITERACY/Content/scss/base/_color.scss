@@ -1,0 +1,46 @@
+$header_bg: #EFE8E0;
+$body_bg: #FFF6EB;
+$body_line_color: #FFE7D3;
+$footer_bg: #483C34;
+
+/*main*/
+$main_color:             #FF6000;
+$main_color_brown:	  	 #58391C;
+
+/*transparency*/
+$main_color_40:#FF600040;
+$main_color_25:#FF600025;
+
+
+/*other*/
+$white:#fff;
+$grey: grey;
+$test_area_bg: #F3F3F3;
+
+
+// 顏色選擇
+$text_color: (
+    colorBlue: $main_color,
+    colorGreen: $main_color_brown
+);
+
+@mixin mainTextColor($parent, $text_color) {
+    #{$parent} {
+      color: $text_color !important;
+    }
+  }
+  
+  @each $text_color, $value in $text_color {
+      @include mainTextColor(".about_content_#{$text_color}", $value);
+    }
+
+    @mixin mainBorderColor($parent, $text_color) {
+        #{$parent} {
+          border-color: $text_color !important;
+        }
+      }
+      
+      @each $text_color, $value in $text_color {
+          @include mainBorderColor(".about_border_#{$text_color}", $value);
+        }
+

@@ -1,0 +1,115 @@
+main {
+
+    .test_area {
+        background-color: $test_area_bg;
+        border: 1px solid $main_color;
+        border-radius: 10px;
+        padding: 40px 5%;
+        width: 80%;
+        margin: 0 auto;
+        max-width: 1200px;
+
+        .test_area_avatar {
+            .test_area_avatar_img {
+                width: 80%;
+                max-width: 120px;
+                margin: 0 auto;
+                padding: 10px;
+                border: 1px solid $main_color;
+                border-radius: 50%;
+                background-color: $white;
+                overflow: hidden;
+            }
+
+            .prompt_text {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+                position: relative;
+                background-color: $white;
+                border-radius: 10px;
+                margin: 30px 0 0;
+                border: 1.5px solid $main_color;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    border-width: 0px 8px 8px 8px;
+                    top: -8px;
+                    border-left: 8px solid transparent;
+                    border-right: 8px solid transparent;
+                    border-bottom: 8px solid $white;
+                    z-index: 1;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    border-width: 0px 9.5px 9.5px 9.5px;
+                    top: -9.5px;
+                    border-left: 9.5px solid transparent;
+                    border-right: 9.5px solid transparent;
+                    border-bottom: 9.5px solid $main_color;
+                }
+
+                h4 {
+                    color: $main_color_brown;
+                }
+            }
+        }
+
+        .test_topic_area {
+            margin: 40px auto;
+            padding: 40px 20px;
+            background-color: $white;
+            border: 1.5px solid $main_color_brown;
+            border-radius: 10px;
+            @extend %boxShadow;
+
+            .test_topic_text {
+                display: flex;
+                justify-content: center;
+
+                h3 {
+                    color: $main_color_brown;
+                }
+            }
+        }
+
+        .test_progress {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            .bg_line {
+                width: calc(100% - 100px);
+                height: 12px;
+                background: $white;
+                border-radius: 10px;
+                border: 1px solid $main_color;
+
+                .line {
+                    background-color: $main_color;
+                    height: 10px;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 576px) {
+    main {}
+}
+
+@media screen and (min-width: 768px) {
+    main {}
+}
+
+@media screen and (min-width: 992px) {}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1400px) {}

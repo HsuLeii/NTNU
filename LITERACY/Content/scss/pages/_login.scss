@@ -1,0 +1,125 @@
+main {
+    .login_area {
+        padding: 100px 0 40px;
+        max-width: 500px;
+        margin: 0 auto;
+        width: 80%;
+
+        .login_title{
+            color: $main_color;
+        }
+        .input-group {
+            margin: 30px auto;
+
+            .input-group-text {
+                border: 0px;
+                padding: 10px 15px;
+                position: absolute;
+                z-index: 1;
+                left: 0;
+                top: 50%;
+                transform: translate(0 , -50%);
+                background-color: transparent;
+
+                i {
+                    color: $main_color_brown;
+                    display: none;
+                }
+
+                &.icon_eye{
+                    z-index: 4;
+                    right: 0;
+                    left: auto;
+                    cursor: pointer;
+
+                    i{
+                        display: block;
+                    }
+                }
+            }
+
+
+            input {
+                border-radius: 5px !important;
+                margin-left: 0px !important;
+                padding: 10px 100px 10px 15px;
+                border-color: $main_color_brown;
+                color: $main_color_brown;
+
+                &::placeholder{
+                    color: $main_color_brown;
+                } 
+
+                &:placeholder-shown {
+                    &+.input-group-text
+                        {
+                            i{
+                                display: block;
+                            }
+                        }
+                    
+                }
+
+                &::-webkit-input-placeholder{
+                    position:relative;
+                    left:calc(19px + 15px);
+                } 
+
+                &.form-control {
+                    &:focus {
+                        box-shadow: 0 0 6px 2px $main_color_25;
+                        border-color: $main_color;
+
+                        &::placeholder{
+                            color: transparent;
+                        } 
+                    }
+                }
+            }
+        }
+
+        .button_login {
+            padding: 8px 10px;
+            background-color: $main_color;
+            width: 100%;
+            margin: 30px auto;
+            color: $white;
+            border-radius: 50px;
+            border: 1px solid $main_color;
+
+            &:hover{
+                transform: scale(1.05);
+                background-color: darken($main_color, 5%);
+            }
+        }
+
+        .button_register {
+            padding: 8px 10px;
+            width: 100%;
+            color: $main_color;
+            border-radius: 50px;
+            border: 1px solid $main_color;
+            &:hover{
+                color: $white;
+                background-color: $main_color;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 576px) {
+    main {
+    }
+}
+
+@media screen and (min-width: 768px) {
+    main {
+    }
+}
+
+@media screen and (min-width: 992px) {}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1400px) {}

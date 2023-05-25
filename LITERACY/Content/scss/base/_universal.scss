@@ -1,0 +1,95 @@
+body {
+    background-position: 50% 50%;
+    background-size: 20px 20px;
+    background-color: $body_bg;
+    background-image: linear-gradient(90deg, $body_line_color, 1px, transparent 0), linear-gradient($body_line_color, 1px, transparent 0);
+}
+
+main {
+    .scroll_area{
+        height: calc(100vh - 115px);
+        overflow-y: scroll;
+        display: flex;
+        align-items: center;
+        .scroll_area_content{
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    }
+
+    .bottom_menu {
+        background-color: $body_bg;
+        border-top: 1px solid $main_color_brown;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 20px 0px 40px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0px);
+    }
+
+    .bottom_menu_item {
+        a {
+            display: flex;
+            margin: 10px 20px;
+
+            .bottom_menu_item_icon {
+                margin: 0 5px 0 0;
+
+                i {
+                    color: $main_color_brown;
+                }
+            }
+
+            .bottom_menu_item_text {
+                p {
+                    color: $main_color_brown;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {}
+
+@media screen and (min-width: 768px) {
+    main {
+
+        .bottom_menu {
+            padding: 20px 20px 60px;
+            display: flex;
+
+            .bottom_menu_item {
+                a {
+                    display: flex;
+                    margin: 10px 20px;
+
+                    .bottom_menu_item_icon {
+                        margin: 0 15px 0 0;
+
+                        i {
+                            color: $main_color_brown;
+                        }
+                    }
+
+                    .bottom_menu_item_text {
+                        p {
+                            color: $main_color_brown;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {}
+
+@media screen and (min-width: 1200px) {
+    main {}
+}
+
+@media screen and (min-width: 1400px) {}
