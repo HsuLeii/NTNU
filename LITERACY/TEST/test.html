@@ -34,33 +34,72 @@
   <!-- ------- ------- ------- ------- ------- ------- ------- -->
   <main>
     <div class="top_tittle"></div>
-    <div class="scroll_area">
-        <div class="scroll_area_content">
-            <div class="test_area">
-                <div class="test_area_avatar">
-                    <div class="test_area_avatar_img">
-                        <img src="../Content/image/photo/avatar/figure/boy.png" alt="">
-                    </div>
-                    <div class="prompt_text">
-                        <h4>
-                            請用中文說出這個單字
-                        </h4>
-                    </div>
+    <div class="test_area">
+        <div class="test_area_avatar">
+            <div class="test_area_avatar_img">
+                <img src="../Content/image/photo/avatar/figure/boy.png" alt="">
+            </div>
+            <div class="prompt_text">
+                <h4>
+                    請用中文說出這個單字
+                </h4>
+            </div>
+        </div>
+
+        <div class="test_topic_area">
+            <div class="test_topic_text">
+                <h3>cat</h3>
+            </div>
+        </div>
+
+        <div class="test_progress">
+            <div class="bg_line">
+              <div class="line" style="width: 40%;"></div>
+            </div>
+            <p>10/40</p>
+        </div>
+
+        <div class="sound_bar_area">
+            <!-- 播放時class加上"play_animation" -->
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+
+        <div class="function_btn_area">
+            <button disabled class="function_btn_item function_btn_item_circle_exclamation">
+                <i class="fa-solid fa-file-circle-exclamation"></i>
+            </button>
+            <div class="main_function_btn_area">
+                <div class="main_function_btn_item_area">
+                    <button class="function_btn_item function_btn_item_microphone">
+                        <i class="fa-solid fa-microphone-lines"></i>
+                    </button>
+                    <p class="microphone_text">
+                        錄音
+                    </p>
                 </div>
-        
-                <div class="test_topic_area">
-                    <div class="test_topic_text">
-                        <h3>cat</h3>
-                    </div>
-                </div>
-        
-                <div class="test_progress">
-                    <div class="bg_line">
-                      <div class="line" style="width: 40%;"></div>
-                    </div>
-                    <p>10/40</p>
+                
+                <div class="main_function_btn_item_area">
+                    <button class="function_btn_item function_btn_item_play play_btn">
+                        <i class="fa-solid fa-play"></i>
+                        <i class="fa-solid fa-stop"></i>
+                    </button>
+                    <p id="playText"class="play_text">
+                        播放
+                    </p>
                 </div>
             </div>
+            <button class="function_btn_item function_btn_item_circle_check">
+                <i class="fa-solid fa-file-circle-check"></i>
+            </button>
         </div>
     </div>
     

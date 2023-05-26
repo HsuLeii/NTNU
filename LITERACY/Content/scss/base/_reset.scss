@@ -1,6 +1,6 @@
 %boxShadow{
     // box-shadow: 2px 9px 46px 0px #00000014;
-    box-shadow: 5px 5px 10px 3px $main_color_40;
+    box-shadow: 5px 5px 10px 3px $main_color_25;
 }
 
 body,
@@ -41,20 +41,20 @@ h1 {
 }
 
 h3 {
-    font-size: 32px;
+    font-size: 26px;
     line-height: 1.7;
     font-weight: bold;
 }
 
 h4 {
-    font-size: 26px;
+    font-size: 22px;
     line-height: 1.5;
     font-weight: bold;
 }
 
 p,
 i {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.7;
 }
 
@@ -62,13 +62,13 @@ span,
 th,
 td,
 .form-control {
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
     line-height: 1.7;
 }
 
 a {
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
     line-height: 1.7;
 }
@@ -84,7 +84,7 @@ rt {
 
 input,
 label {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.7;
 }
 
@@ -97,7 +97,7 @@ img {
 }
 
 button {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.7;
     padding: 0;
     border-width: 0px;
@@ -149,36 +149,36 @@ body {
     }
 
     h3 {
-        font-size: 33px;
+        font-size: 28px;
     }
 
     h4 {
-        font-size: 27px;
+        font-size: 24px;
     }
 
     p,
     i {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     span,
     th,
     td,
     .form-control {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     a {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     input,
     label {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     button {
-        font-size: 22px;
+        font-size: 20px;
     }
 }
 
