@@ -371,7 +371,7 @@ main .test_area .function_btn_area .main_function_btn_area .main_function_btn_it
   100% { opacity: 1;
     height: 40px; } }
 
-@media screen and (min-width: 768px) { main .test_area { margin: 40px auto 175px; }
+@media screen and (min-width: 768px) { main .test_area { margin: 0px auto 175px; }
   main .test_area .test_topic_area { margin: 60px auto; }
   main .test_area .sound_bar_area { margin: 60px auto; }
   main .test_area .function_btn_area .function_btn_item { width: 50px; height: 50px; }
