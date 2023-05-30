@@ -1,174 +1,75 @@
-.footer{
-    padding: 40px 10%;
-    background-color: $footer_bg;
-    position: relative;
-
-    // .footer_decorate{
-    //     position: absolute;
-    //     left: 0;
-    //     top: 0;
-    //     transform: translate(0 , -100%);
-    //     fill: $footer_bg;
-    // }
-
-    .footer_area{
+footer{
+    .bottom_menu {
+        background-color: $body_bg;
+        border-top: 1px solid $main_color_brown;
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        .footer_information{
-            width: 100%;
-            .footer_information_logo{
-                width: 200px;
-            }
-            .footer_information_connection{
-                margin: 40px 0;
-                .connection{
-                    margin: 5px 0;
-                    p{
-                        display: flex;
-                        align-items: flex-start;
-                        color: $white;
-                        .connection_icon{
-                            width: 22px;
-                        }
-                        .connection_link{
-                            word-break: break-all;
-                            color: $white;
-                            &:hover{
-                                color: $main-color;
-                                border-bottom: 1px solid;
-                            }
-                        }
+        justify-content: space-around;
+        padding: 20px 0px 40px;
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0px);
+
+        .bottom_menu_item {
+            a {
+                display: flex;
+                margin: 10px 20px;
+    
+                .bottom_menu_item_icon {
+                    margin: 0 5px 0 0;
+    
+                    i {
+                        color: $main_color_brown;
+                    }
+                }
+    
+                .bottom_menu_item_text {
+                    p {
+                        color: $main_color_brown;
                     }
                 }
             }
         }
-        .other_logo{
-            width: 100%;
-            margin: 0 0 40px;
-            .other_logo_area{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                .other_logo_tittle{
-                    margin: 0 0 20px;
-                    width: 100%;
-                    color: $white;
-                    
-                }
-                .other_logo_img{
-                    margin: 5px 0;
-                    width: 45%;
-                    max-width: 200px;
-                }
-            }
-        }
-        .footer_copyright{
-            width: 100%;
-            p{
-                font-size: 13px;
-                color: $white;
-            }
-        }
-    }
-
-    &::before{
-        content: "";
-        position: absolute;
-        background-image: url(../../Content/image/photo/section-parts02.svg);
     }
 }
 @media screen and (min-width: 576px){
-    .footer{
-    
-        .footer_area{
-            .footer_information{
-                .footer_information_logo{
-                    width: 280px;
-                }
-                .footer_information_connection{
-                    margin: 40px 0 20px;
-                }
-            }
-            .other_logo{
-                .other_logo_area{
-                    align-items: center;
-                    justify-content: flex-start;
-                    .other_logo_tittle{
-                        margin: 0;
-                        width: auto;
-                    }
-                    .other_logo_img{
-                        margin: 0 0 0 40px;
-                        width: 30%;
-                    }
-                }
-            }
-            .footer_copyright{
-                width: 100%;
-            }
-        }
-    }
 }
 @media screen and (min-width: 768px){
-    .footer{
+    footer{
     
-        .footer_area{
-            .footer_information{
+        .bottom_menu {
+            padding: 20px 20px 60px;
+            display: flex;
 
-                .footer_information_connection{
-                    margin: 40px 0;
+            .bottom_menu_item {
+                a {
                     display: flex;
-                    .connection{
-                        margin: 0px 20px 0 0;
+                    margin: 10px 20px;
+
+                    .bottom_menu_item_icon {
+                        margin: 0 15px 0 0;
+
+                        i {
+                            color: $main_color_brown;
+                        }
                     }
-                }
-            }
-        }
-    }
-}
-@media screen and (min-width: 992px) {
-    .footer{
-    
-        .footer_area{
-            flex-direction: row;
-            flex-wrap: wrap;
-            .footer_information{
-                width: 50%;
-                .footer_information_logo{
-                    width: 350px;
-                }
-                .footer_information_connection{
-                    flex-direction: column;
-                    margin: 40px 0 0;
-                    .connection{
-                        margin: 10px 0;
-                        p{
-                            .connection_icon{
-                                width: 30px;
-                            }
+
+                    .bottom_menu_item_text {
+                        p {
+                            color: $main_color_brown;
                         }
                     }
                 }
             }
-            .other_logo{
-                width: 50%;
-                margin: 0;
-                .other_logo_area{
-                    
-                    .other_logo_tittle{
-                        width: 100%;
-                    }
+        }
+    }
+}
+@media screen and (min-width: 1025px) {
+    footer {
 
-                    .other_logo_img{
-                        margin: 10px 40px 10px 0;
-    width: auto;
-    max-width: 250px;
-                    }
-                }
-            }
-            .footer_copyright{
-                margin: 40px 0 0;
-            }
+        .bottom_menu {
+            padding: 20px 20px;
         }
     }
 }

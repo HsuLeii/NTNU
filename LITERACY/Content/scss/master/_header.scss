@@ -6,7 +6,7 @@ header {
     padding: 10px 15px;
     position: relative;
     z-index: 3;
-    border-bottom: 2px solid $main_color;
+    border-bottom: 2px solid $main_color_orangeLight;
 
     .header_decorate{
         position: absolute;
@@ -125,14 +125,14 @@ header {
 
                                 p{
                                     &.nav-link {
-                                        color: $main_color_brown;
+                                        color: $main_color_black;
                                     }
                                 }
                                 
                             }
 
                             .nav-link {
-                                color: $main_color_brown;
+                                color: $main_color_black;
                                 padding: 15px 10px;
                                 font-size: 16px;
 
