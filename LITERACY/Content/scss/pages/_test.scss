@@ -1,12 +1,27 @@
 main {
 
+    .top_tittle{
+        width: 90%;
+        margin: 60px auto 0px;
+        display: flex;
+        justify-content: center;
+        background-color: $main_color;
+        border: 1px solid $main_color;
+        border-radius: 10px 10px 0 0;
+        padding: 5px 20px;
+
+        h3{
+            color: $white;
+        }
+    }
+
     .test_area {
         background-color: $test_area_bg;
         border: 1px solid $main_color;
-        border-radius: 10px;
+        border-radius: 0 0 10px 10px;
         padding: 40px 5%;
         width: 90%;
-        margin: 40px auto 165px;
+        margin: 0px auto 150px;
         max-width: 1200px;
 
         .test_area_avatar {
@@ -169,15 +184,15 @@ main {
             justify-content: space-between;
 
             .function_btn_item {
-                width: 50px;
-                height: 50px;
+                width: 40px;
+                height: 40px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 border-radius: 50%;
                 
                 i {
-                    font-size: 25px;
+                    font-size: 20px;
                 }
 
                 &.function_btn_item_circle_exclamation {
@@ -230,24 +245,6 @@ main {
 
                 .main_function_btn_item_area {
                     margin: 0 10px;
-
-                    .function_btn_item_play{
-                        i{
-                            display: none;
-                        }
-    
-                        &.play_btn{
-                            .fa-play{
-                                display: block;
-                            }
-                        }
-    
-                        &.stop_btn{
-                            .fa-stop{
-                                display: block;
-                            }
-                        }
-                    }
                     
                     p {
                         text-align: center;
@@ -269,7 +266,7 @@ main {
 
     100% {
         opacity: 1;
-        height: 60px;
+        height: 40px;
     }
 }
 
@@ -280,6 +277,7 @@ main {
 @media screen and (min-width: 768px) {
     main {
         .test_area {
+            margin: 40px auto 175px;
 
             .test_topic_area {
                 margin: 60px auto;
@@ -288,6 +286,30 @@ main {
             .sound_bar_area {
                 margin: 60px auto;
             }
+
+            .function_btn_area {
+    
+                .function_btn_item {
+                    width: 50px;
+                    height: 50px;
+                    
+                    i {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    @keyframes sound {
+        0% {
+            opacity: .55;
+            height: 3px;
+        }
+    
+        100% {
+            opacity: 1;
+            height: 60px;
         }
     }
 }

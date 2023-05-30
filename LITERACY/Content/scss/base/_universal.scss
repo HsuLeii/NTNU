@@ -6,18 +6,6 @@ body {
 }
 
 main {
-    .scroll_area{
-        height: calc(100vh - 115px);
-        overflow-y: scroll;
-        display: flex;
-        align-items: center;
-        .scroll_area_content{
-            width: 80%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-    }
-
     .bottom_menu {
         background-color: $body_bg;
         border-top: 1px solid $main_color_brown;
@@ -88,8 +76,13 @@ main {
 
 @media screen and (min-width: 992px) {}
 
-@media screen and (min-width: 1200px) {
-    main {}
+@media screen and (min-width: 1025px) {
+    main {
+
+        .bottom_menu {
+            padding: 20px 20px;
+        }
+    }
 }
 
 @media screen and (min-width: 1400px) {}

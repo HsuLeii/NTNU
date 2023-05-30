@@ -6,9 +6,16 @@ $(".function_btn_item_microphone").click(function () {
 
 $(".function_btn_item_play").click(function () {
     $(".sound_bar_area").toggleClass("play_animation");
-    $(this).toggleClass( "stop_btn" );
-    $(this).toggleClass( "play_btn" );
-    $(this).siblings('.play_text').textContent="New Text";//變成顯示密碼
+
+    
+			if( $(this).children('i').hasClass( "fa-play" ) ){//原本是播放
+				$(this).children('i').addClass( "fa-stop" );
+				$(this).children('i').removeClass( "fa-play" );
+			}else{//原本是停止
+				$(this).children('i').addClass( "fa-play" );
+				$(this).children('i').removeClass( "fa-stop" );
+			}
+
     var playText = document.getElementById("playText");
     if (playText.innerHTML === "停止") {
         playText.innerHTML = "播放";
