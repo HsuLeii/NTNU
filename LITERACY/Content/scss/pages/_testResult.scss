@@ -154,17 +154,20 @@ main {
         }
 
         .total_questions {
-            margin: 50px 0 30px;
+            margin: 80px 0 0px;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
 
-            p {
+            h4 {
                 color: $main_color_brown;
+                margin: 2px 5px;
+                text-align: center;
             }
         }
 
         .literacy_diagnosis_area {
-            margin: 60px auto;
+            margin: 40px auto;
 
             .literacy_diagnosis_title {
                 display: flex;
@@ -626,7 +629,7 @@ main {
             }
 
             .total_questions {
-                margin: 80px 0 30px;
+                margin: 100px 0 30px;
             }
 
             .literacy_diagnosis_area {

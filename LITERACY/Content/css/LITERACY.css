@@ -265,11 +265,11 @@ main .test_area .test_badge_area .ribbon_area .ribbon_sides.ribbon_area_right { 
 
 main .test_area .test_badge_area .ribbon_area .ribbon_sides.ribbon_area_right::before { right: 0%; border-width: 18px 18px 0 0; }
 
-main .test_area .total_questions { margin: 50px 0 30px; display: flex; justify-content: center; }
+main .test_area .total_questions { margin: 80px 0 0px; display: flex; justify-content: center; flex-wrap: wrap; }
 
-main .test_area .total_questions p { color: #58391C; }
+main .test_area .total_questions h4 { color: #58391C; margin: 2px 5px; text-align: center; }
 
-main .test_area .literacy_diagnosis_area { margin: 60px auto; }
+main .test_area .literacy_diagnosis_area { margin: 40px auto; }
 
 main .test_area .literacy_diagnosis_area .literacy_diagnosis_title { display: flex; justify-content: center; }
 
@@ -420,7 +420,7 @@ main .test_area .quiz_answer_area .answer_display_area .answer_display_area_item
   main .test_area .test_badge_area .ribbon_area .ribbon_sides.ribbon_area_left::before { border-width: 30px 0 0 30px; }
   main .test_area .test_badge_area .ribbon_area .ribbon_sides.ribbon_area_right { border-right: 30px solid #F3F3F3; }
   main .test_area .test_badge_area .ribbon_area .ribbon_sides.ribbon_area_right::before { border-width: 30px 30px 0 0; }
-  main .test_area .total_questions { margin: 80px 0 30px; }
+  main .test_area .total_questions { margin: 100px 0 30px; }
   main .test_area .literacy_diagnosis_area .literacy_diagnosis_text { margin: 40px auto 20px; }
   main .test_area .literacy_diagnosis_area .literacy_diagnosis_report .literacy_diagnosis_report_item { padding: 25px 0; }
   main .test_area .literacy_diagnosis_area .literacy_diagnosis_report .literacy_diagnosis_report_item .literacy_diagnosis_report_grade.report_grade_label { width: 120px; }
