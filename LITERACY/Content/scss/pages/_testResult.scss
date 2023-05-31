@@ -145,18 +145,20 @@ main {
                     content: "";
                     position: absolute;
                     bottom: -20%;
-                    border: 0.8em solid lighten($main_color, 15%);
+                    border: calc(18px * 0.8) solid lighten($main_color, 15%);
                 }
 
                 &::before {
-                    left: -1.6em;
-                    border-left: 0.8em solid $test_area_bg;
+                    left: calc(-18px * 0.8 * 2);
+                    border-left: calc(18px * 0.8) solid $test_area_bg;
                 }
 
                 &::after {
-                    right: -1.6em;
-                    border-right: 0.8em solid $test_area_bg;
+                    right: calc(-18px * 0.8 * 2);
+                    border-right: calc(18px * 0.8) solid $test_area_bg;
                 }
+
+
 
             }
         }
@@ -630,7 +632,6 @@ main {
                         right: calc(-30px * 0.8 * 2);
                         border-right: calc(30px * 0.8) solid $test_area_bg;
                     }
-    
                 }
             }
 

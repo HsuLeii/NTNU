@@ -261,11 +261,11 @@ main .test_area .test_badge_area .ribbon_area .ribbon_shadow::before { left: 0; 
 
 main .test_area .test_badge_area .ribbon_area .ribbon_shadow::after { right: 0; border-width: 0.8em 0 0 0.8em; }
 
-main .test_area .test_badge_area .ribbon_area::before, main .test_area .test_badge_area .ribbon_area::after { content: ""; position: absolute; bottom: -20%; border: 0.8em solid #ff904d; }
+main .test_area .test_badge_area .ribbon_area::before, main .test_area .test_badge_area .ribbon_area::after { content: ""; position: absolute; bottom: -20%; border: calc(18px * 0.8) solid #ff904d; }
 
-main .test_area .test_badge_area .ribbon_area::before { left: -1.6em; border-left: 0.8em solid #F3F3F3; }
+main .test_area .test_badge_area .ribbon_area::before { left: calc(-18px * 0.8 * 2); border-left: calc(18px * 0.8) solid #F3F3F3; }
 
-main .test_area .test_badge_area .ribbon_area::after { right: -1.6em; border-right: 0.8em solid #F3F3F3; }
+main .test_area .test_badge_area .ribbon_area::after { right: calc(-18px * 0.8 * 2); border-right: calc(18px * 0.8) solid #F3F3F3; }
 
 main .test_area .total_questions { margin: 50px 0 30px; display: flex; justify-content: center; }
 
