@@ -251,21 +251,19 @@ main .test_area .test_badge_area .badge_outer_layer .badge_outer_item:nth-child(
 
 main .test_area .test_badge_area .ribbon_area { min-width: 240px; position: absolute; bottom: 0; z-index: 1; }
 
-main .test_area .test_badge_area .ribbon_area .ribbon_area_text { font-size: 18px; text-align: center; font-weight: bold; background-color: #ff904d; color: #58391C; padding: 5px 10px; }
+main .test_area .test_badge_area .ribbon_area .ribbon_text { font-size: 18px; text-align: center; font-weight: bold; background-color: #ff904d; color: #58391C; padding: 5px 10px; }
 
-main .test_area .test_badge_area .ribbon_area .ribbon_shadow { position: absolute; z-index: -2; bottom: 20%; width: 100%; }
+main .test_area .test_badge_area .ribbon_area .ribbon_sides { border: 18px solid #ff904d; position: absolute; bottom: 0; z-index: -1; }
 
-main .test_area .test_badge_area .ribbon_area .ribbon_shadow::before, main .test_area .test_badge_area .ribbon_area .ribbon_shadow::after { border-color: #cc4d00 transparent transparent transparent; position: absolute; display: block; border-style: solid; content: ""; }
+main .test_area .test_badge_area .ribbon_area .ribbon_sides::before { content: ""; border-color: #cc4d00 transparent transparent transparent; position: absolute; border-style: solid; }
 
-main .test_area .test_badge_area .ribbon_area .ribbon_shadow::before { left: 0; border-width: 0.8em 0.8em 0 0; }
+main .test_area .test_badge_area .ribbon_area .ribbon_sides.ribbon_area_left { border-left: 18px solid #F3F3F3; left: 0; transform: translate(-50%, 50%); }
 
-main .test_area .test_badge_area .ribbon_area .ribbon_shadow::after { right: 0; border-width: 0.8em 0 0 0.8em; }
+main .test_area .test_badge_area .ribbon_area .ribbon_sides.ribbon_area_left::before { left: 0; border-width: 18px 0 0 18px; }
 
-main .test_area .test_badge_area .ribbon_area::before, main .test_area .test_badge_area .ribbon_area::after { content: ""; position: absolute; bottom: -20%; border: calc(18px * 0.8) solid #ff904d; }
+main .test_area .test_badge_area .ribbon_area .ribbon_sides.ribbon_area_right { border-right: 18px solid #F3F3F3; right: 0; transform: translate(50%, 50%); }
 
-main .test_area .test_badge_area .ribbon_area::before { left: calc(-18px * 0.8 * 2); border-left: calc(18px * 0.8) solid #F3F3F3; }
-
-main .test_area .test_badge_area .ribbon_area::after { right: calc(-18px * 0.8 * 2); border-right: calc(18px * 0.8) solid #F3F3F3; }
+main .test_area .test_badge_area .ribbon_area .ribbon_sides.ribbon_area_right::before { right: 0%; border-width: 18px 18px 0 0; }
 
 main .test_area .total_questions { margin: 50px 0 30px; display: flex; justify-content: center; }
 
@@ -416,12 +414,11 @@ main .test_area .quiz_answer_area .answer_display_area .answer_display_area_item
   main .test_area .test_badge_area .badge_inner_layer .badge_inner_item { width: 240px; height: 240px; }
   main .test_area .test_badge_area .badge_outer_layer .badge_outer_item { width: 280px; height: 280px; }
   main .test_area .test_badge_area .ribbon_area { min-width: 380px; }
-  main .test_area .test_badge_area .ribbon_area .ribbon_area_text { font-size: 30px; }
-  main .test_area .test_badge_area .ribbon_area .ribbon_shadow::before { border-width: calc(30px * 0.8) calc(30px * 0.8) 0 0; }
-  main .test_area .test_badge_area .ribbon_area .ribbon_shadow::after { border-width: calc(30px * 0.8) 0 0 calc(30px * 0.8); }
-  main .test_area .test_badge_area .ribbon_area::before, main .test_area .test_badge_area .ribbon_area::after { border: calc(30px * 0.8) solid #ff904d; }
-  main .test_area .test_badge_area .ribbon_area::before { left: calc(-30px * 0.8 * 2); border-left: calc(30px * 0.8) solid #F3F3F3; }
-  main .test_area .test_badge_area .ribbon_area::after { right: calc(-30px * 0.8 * 2); border-right: calc(30px * 0.8) solid #F3F3F3; }
+  main .test_area .test_badge_area .ribbon_area .ribbon_text { font-size: 30px; }
+  main .test_area .test_badge_area .ribbon_area .ribbon_sides { border: 30px solid #ff904d; }
+  main .test_area .test_badge_area .ribbon_area .ribbon_sides.ribbon_area_left { border-left: 30px solid #F3F3F3; }
+  main .test_area .test_badge_area .ribbon_area .ribbon_sides.ribbon_area_right { border-right: 30px solid #F3F3F3; }
+  main .test_area .test_badge_area .ribbon_area .ribbon_sides.ribbon_area_right::before { border-width: 30px 30px 0 0; }
   main .test_area .total_questions { margin: 80px 0 30px; }
   main .test_area .literacy_diagnosis_area .literacy_diagnosis_text { margin: 40px auto 20px; }
   main .test_area .literacy_diagnosis_area .literacy_diagnosis_report .literacy_diagnosis_report_item { padding: 25px 0; }

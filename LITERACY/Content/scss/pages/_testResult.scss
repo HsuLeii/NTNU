@@ -105,7 +105,7 @@ main {
                 bottom: 0;
                 z-index: 1;
 
-                .ribbon_area_text {
+                .ribbon_text {
                     font-size: 18px;
                     text-align: center;
                     font-weight: bold;
@@ -114,52 +114,42 @@ main {
                     padding: 5px 10px;
                 }
 
-                .ribbon_shadow {
+                .ribbon_sides {
+                    border: 18px solid lighten($main_color, 15%);
                     position: absolute;
-                    z-index: -2;
-                    bottom: 20%;
-                    width: 100%;
-
-                    &::before,
-                    &::after {
-                        border-color: darken($main_color, 10%) transparent transparent transparent;
-                        position: absolute;
-                        display: block;
-                        border-style: solid;
-                        content: "";
-                    }
+                    bottom: 0;
+                    z-index: -1;
 
                     &::before {
+                        content: "";
+                        border-color: darken($main_color, 10%) transparent transparent transparent;
+                        position: absolute;
+                        border-style: solid;
+                    }
+
+                    &.ribbon_area_left {
+                        border-left: 18px solid $test_area_bg;
                         left: 0;
-                        border-width: 0.8em 0.8em 0 0;
+                        transform: translate(-50%, 50%);
+
+                        &::before {
+                            left: 0;
+                            border-width: 18px 0 0 18px;
+                        }
                     }
 
-                    &::after {
+                    &.ribbon_area_right {
+                        border-right: 18px solid $test_area_bg;
                         right: 0;
-                        border-width: 0.8em 0 0 0.8em;
+                        transform: translate(50%, 50%);
+
+                        &::before {
+                            right: 0%;
+                            border-width: 18px 18px 0 0;
+                        }
                     }
+
                 }
-
-                &::before,
-                &::after {
-                    content: "";
-                    position: absolute;
-                    bottom: -20%;
-                    border: calc(18px * 0.8) solid lighten($main_color, 15%);
-                }
-
-                &::before {
-                    left: calc(-18px * 0.8 * 2);
-                    border-left: calc(18px * 0.8) solid $test_area_bg;
-                }
-
-                &::after {
-                    right: calc(-18px * 0.8 * 2);
-                    border-right: calc(18px * 0.8) solid $test_area_bg;
-                }
-
-
-
             }
         }
 
@@ -175,6 +165,7 @@ main {
 
         .literacy_diagnosis_area {
             margin: 60px auto;
+
             .literacy_diagnosis_title {
                 display: flex;
                 justify-content: center;
@@ -204,158 +195,159 @@ main {
                     justify-content: space-between;
                     padding: 15px 0;
                     border-top: 1px dotted $main_color_brown;
-    
-                    &:nth-child(1){
+
+                    &:nth-child(1) {
                         border-top: 0px;
                     }
-    
+
                     .literacy_diagnosis_report_grade {
                         background-color: $main_color;
                         padding: 5px 10px;
                         border-radius: 5px;
                         text-align: center;
-    
+
                         p {
                             color: $white;
                         }
 
-                        &.report_grade_label{
+                        &.report_grade_label {
                             width: 90px;
                         }
-    
-                        &.first_grade_label{
+
+                        &.first_grade_label {
                             background-color: $first_grade;
                         }
-    
-                        &.second_grade_label{
+
+                        &.second_grade_label {
                             background-color: $second_grade;
                         }
-    
-                        &.third_grade_label{
+
+                        &.third_grade_label {
                             background-color: $third_grade;
                         }
-    
-                        &.fourth_grade_label{
+
+                        &.fourth_grade_label {
                             background-color: $fourth_grade;
                         }
-    
-                        &.fifth_grade_label{
+
+                        &.fifth_grade_label {
                             background-color: $fifth_grade;
                         }
-    
-                        &.sixth_grade_label{
+
+                        &.sixth_grade_label {
                             background-color: $sixth_grade;
                         }
                     }
-    
+
                     .literacy_diagnosis_report_progress {
                         width: calc(100% - 170px);
-    
+
                         .bg_line {
                             width: 100%;
                             height: 12px;
                             background-color: $white;
                             border-radius: 10px;
                             border: 1px solid $main_color;
-    
+
                             .line {
                                 background-color: $main_color;
                                 height: 10px;
                                 border-radius: 10px;
                             }
                         }
-    
-                        &.first_grade_progress{
+
+                        &.first_grade_progress {
                             .bg_line {
                                 border: 1px solid $first_grade;
-        
+
                                 .line {
                                     background-color: $first_grade;
                                 }
                             }
                         }
-    
-                        &.second_grade_progress{
+
+                        &.second_grade_progress {
                             .bg_line {
                                 border: 1px solid $second_grade;
-        
+
                                 .line {
                                     background-color: $second_grade;
                                 }
                             }
                         }
-    
-                        &.third_grade_progress{
+
+                        &.third_grade_progress {
                             .bg_line {
                                 border: 1px solid $third_grade;
-        
+
                                 .line {
                                     background-color: $third_grade;
                                 }
                             }
                         }
-    
-                        &.fourth_grade_progress{
+
+                        &.fourth_grade_progress {
                             .bg_line {
                                 border: 1px solid $fourth_grade;
-        
+
                                 .line {
                                     background-color: $fourth_grade;
                                 }
                             }
                         }
-    
-                        &.fifth_grade_progress{
+
+                        &.fifth_grade_progress {
                             .bg_line {
                                 border: 1px solid $fifth_grade;
-        
+
                                 .line {
                                     background-color: $fifth_grade;
                                 }
                             }
                         }
-    
-                        &.sixth_grade_progress{
+
+                        &.sixth_grade_progress {
                             .bg_line {
                                 border: 1px solid $sixth_grade;
-        
+
                                 .line {
                                     background-color: $sixth_grade;
                                 }
                             }
                         }
-    
+
                     }
-    
-                    .literacy_diagnosis_report_percentage{
+
+                    .literacy_diagnosis_report_percentage {
                         min-width: 50px;
                         text-align: right;
-                        p{
+
+                        p {
                             color: $main_color_brown;
                         }
                     }
                 }
             }
 
-            .recommended_area{
+            .recommended_area {
                 margin: 60px auto;
 
-                .recommended_report{
+                .recommended_report {
 
-                    .recommended_report_dictionary{
+                    .recommended_report_dictionary {
                         flex-wrap: wrap;
 
-                        .report_grade_btn{
+                        .report_grade_btn {
                             width: calc(100% - 105px);
                         }
 
-                        .dictionary_grade{
+                        .dictionary_grade {
                             display: flex;
                             flex-wrap: wrap;
                             width: 100%;
                             margin: 20px auto 0;
 
-                            .dictionary_text_item{
+                            .dictionary_text_item {
                                 margin: 10px 10px 10px 0;
                                 border: 1px solid;
                                 border-color: $main_color_brown;
@@ -363,102 +355,102 @@ main {
                                 border-radius: 5px;
                                 background-color: $white;
 
-                                .dictionary_text{
-                                    p{
+                                .dictionary_text {
+                                    p {
                                         color: $main_color_brown;
                                         font-weight: bold;
                                     }
-    
-                                    &.dictionary_text_english{
-                                        p{
+
+                                    &.dictionary_text_english {
+                                        p {
                                             font-size: 25px;
                                         }
                                     }
-    
-                                    &.dictionary_text_chinese{
-                                            p{
-                                                font-size: 15px;
-                                            }
+
+                                    &.dictionary_text_chinese {
+                                        p {
+                                            font-size: 15px;
+                                        }
                                     }
                                 }
-                                
+
                             }
-                            
-                            &.dictionary_first_grade{
-                                .dictionary_text_item{
+
+                            &.dictionary_first_grade {
+                                .dictionary_text_item {
                                     border-color: $first_grade;
-    
-                                    .dictionary_text{
-                                        p{
+
+                                    .dictionary_text {
+                                        p {
                                             color: $first_grade;
                                         }
                                     }
-                                    
+
                                 }
                             }
 
-                            &.dictionary_second_grade{
-                                .dictionary_text_item{
+                            &.dictionary_second_grade {
+                                .dictionary_text_item {
                                     border-color: $second_grade;
-    
-                                    .dictionary_text{
-                                        p{
+
+                                    .dictionary_text {
+                                        p {
                                             color: $second_grade;
                                         }
                                     }
-                                    
+
                                 }
                             }
 
-                            &.dictionary_third_grade{
-                                .dictionary_text_item{
+                            &.dictionary_third_grade {
+                                .dictionary_text_item {
                                     border-color: $third_grade;
-    
-                                    .dictionary_text{
-                                        p{
+
+                                    .dictionary_text {
+                                        p {
                                             color: $third_grade;
                                         }
                                     }
-                                    
+
                                 }
                             }
 
-                            &.dictionary_fourth_grade{
-                                .dictionary_text_item{
+                            &.dictionary_fourth_grade {
+                                .dictionary_text_item {
                                     border-color: $fourth_grade;
-    
-                                    .dictionary_text{
-                                        p{
+
+                                    .dictionary_text {
+                                        p {
                                             color: $fourth_grade;
                                         }
                                     }
-                                    
+
                                 }
                             }
 
-                            &.dictionary_fifth_grade{
-                                .dictionary_text_item{
+                            &.dictionary_fifth_grade {
+                                .dictionary_text_item {
                                     border-color: $fifth_grade;
-    
-                                    .dictionary_text{
-                                        p{
+
+                                    .dictionary_text {
+                                        p {
                                             color: $fifth_grade;
                                         }
                                     }
-                                    
+
                                 }
                             }
 
-                            &.dictionary_sixth_grade{
-                                .dictionary_text_item{
+                            &.dictionary_sixth_grade {
+                                .dictionary_text_item {
                                     border-color: $sixth_grade;
-    
-                                    .dictionary_text{
-                                        p{
+
+                                    .dictionary_text {
+                                        p {
                                             color: $sixth_grade;
                                         }
                                     }
-                                    
+
                                 }
                             }
                         }
@@ -466,9 +458,9 @@ main {
                 }
             }
         }
-        
-        .quiz_answer_area{
-            .quiz_answer_title{
+
+        .quiz_answer_area {
+            .quiz_answer_title {
                 display: flex;
                 justify-content: center;
                 margin: 60px auto 10px;
@@ -484,77 +476,81 @@ main {
                 }
             }
 
-            .answer_display_area{
+            .answer_display_area {
                 margin: 20px auto;
 
                 .answer_display_area_item {
                     display: flex;
-                        flex-wrap: wrap;
-                        margin: 10px auto;
-                    &.correct_answer_area{
-                        
-                        .correct_answer_item{
+                    flex-wrap: wrap;
+                    margin: 10px auto;
+
+                    &.correct_answer_area {
+
+                        .correct_answer_item {
                             background-color: $correct_answer_bg;
                             border: 1px solid $correct_answer_color;
-    
+
                             .answer_item_text {
                                 color: $correct_answer_color;
                             }
                         }
                     }
-    
-                    &.wrong_answer_area{
+
+                    &.wrong_answer_area {
                         padding: 10px 0;
                         border-top: 1px dotted $main_color_brown;
-                        .wrong_answer_item{
+
+                        .wrong_answer_item {
                             background-color: $wrong_answer_bg;
                             border: 1px solid $wrong_answer_color;
-    
+
                             .answer_item_text {
                                 color: $wrong_answer_color;
                             }
                         }
                     }
 
-                    .answer_item{
+                    .answer_item {
                         position: relative;
                         padding: 5px 10px;
-                            margin: 10px 10px 10px 0;
-                            border-radius: 5px;
+                        margin: 10px 10px 10px 0;
+                        border-radius: 5px;
                     }
-    
+
                     .answer_item_text {
                         font-weight: bold;
                         color: $wrong_answer_color;
-                            
-    
-                            &.answer_item_english{
-                                p{
-                                    font-size: 25px;
-                                }
+
+
+                        &.answer_item_english {
+                            p {
+                                font-size: 25px;
                             }
-                            &.answer_item_chinese{
-                                max-width: calc(100% - 20px);
-                                p{
-                                    font-size: 15px;
-                                }
+                        }
+
+                        &.answer_item_chinese {
+                            max-width: calc(100% - 20px);
+
+                            p {
+                                font-size: 15px;
                             }
+                        }
                     }
-    
-                    .answer_icon{
+
+                    .answer_icon {
                         position: absolute;
                         right: 5px;
                         bottom: 5px;
                         line-height: 1;
-    
-                        &.correct_answer_icon{
-                            i{
+
+                        &.correct_answer_icon {
+                            i {
                                 color: $correct_answer_color;
                             }
                         }
-    
-                        &.wrong_answer_icon{
-                            i{
+
+                        &.wrong_answer_icon {
+                            i {
                                 color: $wrong_answer_color;
                             }
                         }
@@ -576,61 +572,52 @@ main {
             .test_badge_area {
                 width: 380px;
                 margin: 60px auto;
-    
+
                 .badge_inner_layer {
                     .badge_score {
                         p {
                             font-size: 125px;
                         }
                     }
-    
+
                     .badge_inner_item {
                         width: 240px;
                         height: 240px;
                     }
-    
+
                 }
-    
+
                 .badge_outer_layer {
-    
+
                     .badge_outer_item {
                         width: 280px;
                         height: 280px;
                     }
-    
+
                 }
-    
+
                 .ribbon_area {
                     min-width: 380px;
-    
-                    .ribbon_area_text {
+
+                    .ribbon_text {
                         font-size: 30px;
                     }
+
+                    .ribbon_sides {
+                        border: 30px solid lighten($main_color, 15%);
     
-                    .ribbon_shadow {
-    
-                        &::before {
-                            border-width: calc(30px * 0.8) calc(30px * 0.8) 0 0;
+                        &.ribbon_area_left {
+                            border-left: 30px solid $test_area_bg;
                         }
     
-                        &::after {
-                            border-width: calc(30px * 0.8) 0 0 calc(30px * 0.8);
+                        &.ribbon_area_right {
+                            border-right: 30px solid $test_area_bg;
+    
+                            &::before {
+                                border-width: 30px 30px 0 0;
+                            }
                         }
-                    }
     
-                    &::before,
-                    &::after {
-                        border: calc(30px * 0.8) solid lighten($main_color, 15%);
-                    }
-    
-                    &::before {
-                        left: calc(-30px * 0.8 * 2);
-                        border-left: calc(30px * 0.8) solid $test_area_bg;
-                    }
-    
-                    &::after {
-                        right: calc(-30px * 0.8 * 2);
-                        border-right: calc(30px * 0.8) solid $test_area_bg;
                     }
                 }
             }
@@ -640,86 +627,87 @@ main {
             }
 
             .literacy_diagnosis_area {
-    
+
                 .literacy_diagnosis_text {
                     margin: 40px auto 20px;
                 }
-    
+
                 .literacy_diagnosis_report {
                     .literacy_diagnosis_report_item {
                         padding: 25px 0;
-                        
+
                         .literacy_diagnosis_report_grade {
-    
-                            &.report_grade_label{
+
+                            &.report_grade_label {
                                 width: 120px;
                             }
                         }
-        
+
                         .literacy_diagnosis_report_progress {
                             width: calc(100% - 200px);
                         }
                     }
                 }
-    
-                .recommended_area{
-    
-                    .recommended_report{
-    
-                        .recommended_report_dictionary{
-    
-                            .report_grade_btn{
+
+                .recommended_area {
+
+                    .recommended_report {
+
+                        .recommended_report_dictionary {
+
+                            .report_grade_btn {
                                 width: calc(100% - 135px);
                             }
-    
-                            .dictionary_grade{
-    
-                                .dictionary_text_item{
-    
-                                    .dictionary_text{
-        
-                                        &.dictionary_text_english{
-                                            p{
+
+                            .dictionary_grade {
+
+                                .dictionary_text_item {
+
+                                    .dictionary_text {
+
+                                        &.dictionary_text_english {
+                                            p {
                                                 font-size: 30px;
                                             }
                                         }
-        
-                                        &.dictionary_text_chinese{
-                                                p{
-                                                    font-size: 20px;
-                                                }
+
+                                        &.dictionary_text_chinese {
+                                            p {
+                                                font-size: 20px;
+                                            }
                                         }
                                     }
-                                    
+
                                 }
-                                
+
                             }
                         }
                     }
                 }
             }
 
-            .quiz_answer_area{
-    
-                .answer_display_area{
+            .quiz_answer_area {
+
+                .answer_display_area {
                     margin: 25px auto;
-    
+
                     .answer_display_area_item {
-                            margin: 20px auto;
-            
-                            .answer_item_text {
-            
-                                    &.answer_item_english{
-                                        p{
-                                            font-size: 30px;
-                                        }
-                                    }
-                                    &.answer_item_chinese{
-                                        p{
-                                            font-size: 20px;
-                                        }
-                                    }
+                        margin: 20px auto;
+
+                        .answer_item_text {
+
+                            &.answer_item_english {
+                                p {
+                                    font-size: 30px;
+                                }
                             }
+
+                            &.answer_item_chinese {
+                                p {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
                     }
                 }
             }
