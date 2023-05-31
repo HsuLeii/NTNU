@@ -355,7 +355,8 @@ main {
 
                             .dictionary_text_item{
                                 margin: 10px 10px 10px 0;
-                                border: 1px solid $main_color_brown;
+                                border: 1px solid;
+                                border-color: $main_color_brown;
                                 padding: 5px;
                                 border-radius: 5px;
                                 background-color: $white;
@@ -381,6 +382,83 @@ main {
                                 
                             }
                             
+                            &.dictionary_first_grade{
+                                .dictionary_text_item{
+                                    border-color: $first_grade;
+    
+                                    .dictionary_text{
+                                        p{
+                                            color: $first_grade;
+                                        }
+                                    }
+                                    
+                                }
+                            }
+
+                            &.dictionary_second_grade{
+                                .dictionary_text_item{
+                                    border-color: $second_grade;
+    
+                                    .dictionary_text{
+                                        p{
+                                            color: $second_grade;
+                                        }
+                                    }
+                                    
+                                }
+                            }
+
+                            &.dictionary_third_grade{
+                                .dictionary_text_item{
+                                    border-color: $third_grade;
+    
+                                    .dictionary_text{
+                                        p{
+                                            color: $third_grade;
+                                        }
+                                    }
+                                    
+                                }
+                            }
+
+                            &.dictionary_fourth_grade{
+                                .dictionary_text_item{
+                                    border-color: $fourth_grade;
+    
+                                    .dictionary_text{
+                                        p{
+                                            color: $fourth_grade;
+                                        }
+                                    }
+                                    
+                                }
+                            }
+
+                            &.dictionary_fifth_grade{
+                                .dictionary_text_item{
+                                    border-color: $fifth_grade;
+    
+                                    .dictionary_text{
+                                        p{
+                                            color: $fifth_grade;
+                                        }
+                                    }
+                                    
+                                }
+                            }
+
+                            &.dictionary_sixth_grade{
+                                .dictionary_text_item{
+                                    border-color: $sixth_grade;
+    
+                                    .dictionary_text{
+                                        p{
+                                            color: $sixth_grade;
+                                        }
+                                    }
+                                    
+                                }
+                            }
                         }
                     }
                 }
