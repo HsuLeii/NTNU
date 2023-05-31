@@ -231,7 +231,7 @@ main .test_area .test_badge_area .badge_inner_layer .badge_score { position: abs
 
 main .test_area .test_badge_area .badge_inner_layer .badge_score p { font-size: 60px; font-weight: bold; color: #58391C; }
 
-main .test_area .test_badge_area .badge_inner_layer .badge_inner_item { width: 150px; height: 150px; border-radius: 20px; text-align: center; background-color: #f8ebbb; padding: 10px; }
+main .test_area .test_badge_area .badge_inner_layer .badge_inner_item { width: 150px; height: 150px; border-radius: 5px; text-align: center; background-color: #f8ebbb; padding: 10px; }
 
 main .test_area .test_badge_area .badge_inner_layer .badge_inner_item:nth-child(2), main .test_area .test_badge_area .badge_inner_layer .badge_inner_item:nth-child(3) { position: absolute; top: 0; }
 
@@ -241,7 +241,7 @@ main .test_area .test_badge_area .badge_inner_layer .badge_inner_item:nth-child(
 
 main .test_area .test_badge_area .badge_outer_layer { position: relative; }
 
-main .test_area .test_badge_area .badge_outer_layer .badge_outer_item { width: 170px; height: 170px; border-radius: 20px; text-align: center; background-color: #FF6000; padding: 10px; }
+main .test_area .test_badge_area .badge_outer_layer .badge_outer_item { width: 170px; height: 170px; border-radius: 5px; text-align: center; background-color: #FF6000; padding: 10px; }
 
 main .test_area .test_badge_area .badge_outer_layer .badge_outer_item:nth-child(2), main .test_area .test_badge_area .badge_outer_layer .badge_outer_item:nth-child(3) { position: absolute; top: 0; }
 
@@ -417,6 +417,7 @@ main .test_area .quiz_answer_area .answer_display_area .answer_display_area_item
   main .test_area .test_badge_area .ribbon_area .ribbon_text { font-size: 30px; }
   main .test_area .test_badge_area .ribbon_area .ribbon_sides { border: 30px solid #ff904d; }
   main .test_area .test_badge_area .ribbon_area .ribbon_sides.ribbon_area_left { border-left: 30px solid #F3F3F3; }
+  main .test_area .test_badge_area .ribbon_area .ribbon_sides.ribbon_area_left::before { border-width: 30px 0 0 30px; }
   main .test_area .test_badge_area .ribbon_area .ribbon_sides.ribbon_area_right { border-right: 30px solid #F3F3F3; }
   main .test_area .test_badge_area .ribbon_area .ribbon_sides.ribbon_area_right::before { border-width: 30px 30px 0 0; }
   main .test_area .total_questions { margin: 80px 0 30px; }

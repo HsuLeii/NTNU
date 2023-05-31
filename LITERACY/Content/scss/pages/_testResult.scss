@@ -33,7 +33,7 @@ main {
                 .badge_inner_item {
                     width: 150px;
                     height: 150px;
-                    border-radius: 20px;
+                    border-radius: 5px;
                     text-align: center;
                     background-color: $badge_yellow;
                     padding: 10px;
@@ -69,7 +69,7 @@ main {
                 .badge_outer_item {
                     width: 170px;
                     height: 170px;
-                    border-radius: 20px;
+                    border-radius: 5px;
                     text-align: center;
                     background-color: $main_color;
                     padding: 10px;
@@ -608,6 +608,9 @@ main {
     
                         &.ribbon_area_left {
                             border-left: 30px solid $test_area_bg;
+                            &::before {
+                                border-width: 30px 0 0 30px;
+                            }
                         }
     
                         &.ribbon_area_right {
