@@ -56,7 +56,7 @@ body { background-color: #FFF6EB; }
 ::selection { background: #FF6000; color: #fff; }
 
 @media screen and (min-width: 768px) { h1 { font-size: 38px; }
-  h3 { font-size: 28px; }
+  h3 { font-size: 35px; }
   h4 { font-size: 24px; }
   p, i { font-size: 20px; }
   span, th, td, .form-control { font-size: 20px; }
