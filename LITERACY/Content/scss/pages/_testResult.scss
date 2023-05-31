@@ -213,6 +213,34 @@ main {
                             color: $white;
                         }
 
+                        &:hover{
+                            &.report_grade_btn{
+                                &.first_grade_label {
+                                    background-color: darken($first_grade, 6%);
+                                }
+        
+                                &.second_grade_label {
+                                    background-color: darken($second_grade, 6%);
+                                }
+        
+                                &.third_grade_label {
+                                    background-color: darken($third_grade, 6%);
+                                }
+        
+                                &.fourth_grade_label {
+                                    background-color: darken($fourth_grade, 6%);
+                                }
+        
+                                &.fifth_grade_label {
+                                    background-color: darken($fifth_grade, 6%);
+                                }
+        
+                                &.sixth_grade_label {
+                                    background-color: darken($sixth_grade, 6%);
+                                }
+                            }
+                        }
+
                         &.report_grade_label {
                             width: 90px;
                         }

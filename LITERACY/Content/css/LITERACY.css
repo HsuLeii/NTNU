@@ -287,6 +287,18 @@ main .test_area .literacy_diagnosis_area .literacy_diagnosis_report .literacy_di
 
 main .test_area .literacy_diagnosis_area .literacy_diagnosis_report .literacy_diagnosis_report_item .literacy_diagnosis_report_grade p { color: #fff; }
 
+main .test_area .literacy_diagnosis_area .literacy_diagnosis_report .literacy_diagnosis_report_item .literacy_diagnosis_report_grade:hover.report_grade_btn.first_grade_label { background-color: #ff7001; }
+
+main .test_area .literacy_diagnosis_area .literacy_diagnosis_report .literacy_diagnosis_report_item .literacy_diagnosis_report_grade:hover.report_grade_btn.second_grade_label { background-color: #c35500; }
+
+main .test_area .literacy_diagnosis_area .literacy_diagnosis_report .literacy_diagnosis_report_item .literacy_diagnosis_report_grade:hover.report_grade_btn.third_grade_label { background-color: #d74803; }
+
+main .test_area .literacy_diagnosis_area .literacy_diagnosis_report .literacy_diagnosis_report_item .literacy_diagnosis_report_grade:hover.report_grade_btn.fourth_grade_label { background-color: #7b2a00; }
+
+main .test_area .literacy_diagnosis_area .literacy_diagnosis_report .literacy_diagnosis_report_item .literacy_diagnosis_report_grade:hover.report_grade_btn.fifth_grade_label { background-color: #371401; }
+
+main .test_area .literacy_diagnosis_area .literacy_diagnosis_report .literacy_diagnosis_report_item .literacy_diagnosis_report_grade:hover.report_grade_btn.sixth_grade_label { background-color: #1a0101; }
+
 main .test_area .literacy_diagnosis_area .literacy_diagnosis_report .literacy_diagnosis_report_item .literacy_diagnosis_report_grade.report_grade_label { width: 90px; }
 
 main .test_area .literacy_diagnosis_area .literacy_diagnosis_report .literacy_diagnosis_report_item .literacy_diagnosis_report_grade.first_grade_label { background-color: #ff8120; }
