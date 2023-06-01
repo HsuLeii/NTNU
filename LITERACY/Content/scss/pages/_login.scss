@@ -1,13 +1,15 @@
 main {
+
     .login_area {
         padding: 100px 0 40px;
         max-width: 500px;
         margin: 0 auto;
         width: 80%;
 
-        .login_title{
+        .login_title {
             color: $main_color;
         }
+
         .input-group {
             margin: 30px auto;
 
@@ -18,7 +20,7 @@ main {
                 z-index: 1;
                 left: 0;
                 top: 50%;
-                transform: translate(0 , -50%);
+                transform: translate(0, -50%);
                 background-color: transparent;
 
                 i {
@@ -26,55 +28,36 @@ main {
                     display: none;
                 }
 
-                &.icon_eye{
+                &.icon_eye {
                     z-index: 4;
                     right: 0;
                     left: auto;
                     cursor: pointer;
 
-                    i{
+                    i {
                         display: block;
                     }
                 }
             }
 
 
-            input {
-                border-radius: 5px !important;
-                margin-left: 0px !important;
+            .form-control {
                 padding: 10px 100px 10px 15px;
-                border-color: $main_color_brown;
-                color: $main_color_brown;
-
-                &::placeholder{
-                    color: $main_color_brown;
-                } 
 
                 &:placeholder-shown {
-                    &+.input-group-text
-                        {
-                            i{
-                                display: block;
-                            }
+                    &+.input-group-text {
+                        i {
+                            display: block;
                         }
-                    
-                }
-
-                &::-webkit-input-placeholder{
-                    position:relative;
-                    left:calc(19px + 15px);
-                } 
-
-                &.form-control {
-                    &:focus {
-                        box-shadow: 0 0 6px 2px $main_color_25;
-                        border-color: $main_color;
-
-                        &::placeholder{
-                            color: transparent;
-                        } 
                     }
+
                 }
+
+                &::-webkit-input-placeholder {
+                    position: relative;
+                    left: calc(19px + 15px);
+                }
+
             }
         }
 
@@ -87,7 +70,7 @@ main {
             border-radius: 50px;
             border: 1px solid $main_color;
 
-            &:hover{
+            &:hover {
                 transform: scale(1.05);
                 background-color: darken($main_color, 5%);
             }
@@ -99,7 +82,8 @@ main {
             color: $main_color;
             border-radius: 50px;
             border: 1px solid $main_color;
-            &:hover{
+
+            &:hover {
                 color: $white;
                 background-color: $main_color;
             }
@@ -109,13 +93,9 @@ main {
 
 
 @media screen and (min-width: 576px) {
-    main {
-    }
 }
 
 @media screen and (min-width: 768px) {
-    main {
-    }
 }
 
 @media screen and (min-width: 992px) {}

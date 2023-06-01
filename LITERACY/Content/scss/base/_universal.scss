@@ -5,10 +5,196 @@ body {
     background-image: linear-gradient(90deg, $body_line_color, 1px, transparent 0), linear-gradient($body_line_color, 1px, transparent 0);
 }
 
+  input::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    .input-group {
+        margin: 30px auto;
+
+        .form-control {
+            border-radius: 5px !important;
+            margin-left: 0px !important;
+            padding: 10px 15px;
+            border-color: $main_color_brown;
+            color: $main_color_brown;
+            width: 80%;
+
+            &::placeholder {
+                color: $main_color_brown;
+            }
+
+            &:focus {
+                outline: none;
+                border-color: $main_color;
+                @extend %boxShadow;
+                border-radius: 5px;
+
+                &::placeholder {
+                    color: transparent;
+                }
+            }
+
+            &::-webkit-calendar-picker-indicator {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            &[type=date]{
+                &:required:invalid{
+                    &::-webkit-datetime-edit{
+                        color: transparent;
+                    }
+                }
+
+                &:before {
+                    content: attr(placeholder) !important;
+                    color: $main_color_brown;
+                  }
+
+                &::-webkit-datetime-edit-text,
+                &::-webkit-datetime-edit-day-field,
+                &::-webkit-datetime-edit-month-field,
+                &::-webkit-datetime-edit-year-field{
+                        margin: 0;
+                        padding: 0;
+                        letter-spacing: 0;
+                    }
+
+                &:focus {
+    
+                    &::placeholder {
+                        color: transparent;
+                    }
+
+                    &:before {
+                        content: "";
+                      }
+
+                    &::-webkit-datetime-edit-text,
+                    &::-webkit-datetime-edit-day-field,
+                    &::-webkit-datetime-edit-month-field,
+                    &::-webkit-datetime-edit-year-field{
+                        background-color: $main_color;
+                        color: $white;
+                    }
+                }
+
+                &:focus,
+                &:valid{
+                    &:before {
+                        content: "" !important;
+                      }
+                }
+
+                
+            }
+
+        }
+
+        .input_date_icon{
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            z-index: 11;
+            pointer-events: none;
+            user-select: none;
+            color: $main_color_brown;
+        }
+
+        .select-wrap {
+            width: 80%;
+            position: relative;
+            margin-left: 0 !important;
+            
+
+            .form-select {
+                -webkit-appearance: none;
+                color: $main_color_brown;
+                padding: 10px 40px 10px 12px;
+                border: 1px solid $main_color_brown;
+                border-radius: 5px !important;
+                line-height: 1.7;
+                background-color: $white;
+                background-image: none;
+                cursor: pointer;
+
+                option {
+                    color: $main_color_brown;
+                    padding: 5px 10px;
+
+                    &:hover {
+                        background: lighten($main_color, 15%) !important;
+                    }
+
+                    &:checked {
+                        box-shadow: 0 0 0px 100px $main_color inset;
+                    }
+                }
+
+                &:focus {
+                    outline: none;
+                    border-color: $main_color;
+                    @extend %boxShadow;
+                    border-radius: 5px;
+                }
+
+                &:required,
+                &:invalid {
+                    color: $disabled;
+                }
+
+            }
+
+            .select_icon {
+                position: absolute;
+                right: 12px;
+                top: 10px;
+                transform: translate(0, 0%);
+                z-index: 11;
+                pointer-events: none;
+                user-select: none;
+                transition: 0.3s;
+            }
+
+            &:focus-within {
+                .form-select {
+                    position: absolute;
+                    right: 0;
+                    width: 100%;
+                    z-index: 10;
+
+                    option {
+                        color: $main_color_brown;
+                        padding: 5px 10px;
+    
+                        &:disabled {
+                            display: none;
+                        }
+                    }
+                }
+
+                .select_icon {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 576px) {}
 
-@media screen and (min-width: 768px) {
-}
+@media screen and (min-width: 768px) {}
 
 @media screen and (min-width: 992px) {}
 
