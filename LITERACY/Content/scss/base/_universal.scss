@@ -57,10 +57,10 @@ main {
                     }
                 }
 
-                &:before {
-                    content: attr(placeholder) !important;
-                    color: $main_color_brown;
-                  }
+                // &:before {
+                //     content: attr(placeholder) !important;
+                //     color: $main_color_brown;
+                //   }
 
                 &::-webkit-datetime-edit-text,
                 &::-webkit-datetime-edit-day-field,
@@ -76,10 +76,6 @@ main {
                     &::placeholder {
                         color: transparent;
                     }
-
-                    &:before {
-                        content: "";
-                      }
 
                     &::-webkit-datetime-edit-text,
                     &::-webkit-datetime-edit-day-field,

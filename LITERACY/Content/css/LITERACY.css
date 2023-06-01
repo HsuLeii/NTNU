@@ -82,13 +82,9 @@ main .input-group .form-control::-webkit-calendar-picker-indicator { position: a
 
 main .input-group .form-control[type=date]:required:invalid::-webkit-datetime-edit { color: transparent; }
 
-main .input-group .form-control[type=date]:before { content: attr(placeholder) !important; color: #58391C; }
-
 main .input-group .form-control[type=date]::-webkit-datetime-edit-text, main .input-group .form-control[type=date]::-webkit-datetime-edit-day-field, main .input-group .form-control[type=date]::-webkit-datetime-edit-month-field, main .input-group .form-control[type=date]::-webkit-datetime-edit-year-field { margin: 0; padding: 0; letter-spacing: 0; }
 
 main .input-group .form-control[type=date]:focus::placeholder { color: transparent; }
-
-main .input-group .form-control[type=date]:focus:before { content: ""; }
 
 main .input-group .form-control[type=date]:focus::-webkit-datetime-edit-text, main .input-group .form-control[type=date]:focus::-webkit-datetime-edit-day-field, main .input-group .form-control[type=date]:focus::-webkit-datetime-edit-month-field, main .input-group .form-control[type=date]:focus::-webkit-datetime-edit-year-field { background-color: #FF6000; color: #fff; }
 
