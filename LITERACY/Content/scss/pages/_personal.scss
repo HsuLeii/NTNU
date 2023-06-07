@@ -23,12 +23,18 @@ main {
         .input-group-label {
             padding: 10px 15px;
             color: $main_color_brown;
-            width: 20%;
+            width: 100%;
         }
 
-        
-
-
+        .input_date_icon{
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            z-index: 1;
+            pointer-events: none;
+            user-select: none;
+            color: $main_color_brown;
+        }
     }
 
 }
@@ -37,27 +43,16 @@ main {
 
 @media screen and (min-width: 768px) {
     main {
-        .test_area {
-            margin: 0px auto 175px;
+        .input-group {
+            flex-direction: row;
 
-            .test_topic_area {
-                margin: 60px auto;
+            .input-group-label {
+                width: 20%;
             }
-
-            .sound_bar_area {
-                margin: 60px auto;
-            }
-
-            .function_btn_area {
-
-                .function_btn_item {
-                    width: 50px;
-                    height: 50px;
-
-                    i {
-                        font-size: 25px;
-                    }
-                }
+    
+    
+            .form-control {
+                width: 80%;
             }
         }
     }

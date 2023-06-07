@@ -13,7 +13,7 @@ body { font-family: 'Lexend', 'Noto Sans SC', 'Noto Sans TC'; }
 
 .about_border_colorGreen { border-color: #58391C !important; }
 
-main .input-group .form-control:focus, main .input-group .select-wrap .form-select:focus, main .test_area .test_topic_area { box-shadow: 5px 5px 10px 3px #FF600025; }
+main .input-group .form-control:focus, main .test_area .test_topic_area { box-shadow: 5px 5px 10px 3px #FF600025; }
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, figure { margin: 0; padding: 0; list-style: none; }
 
@@ -66,11 +66,31 @@ body { background-color: #FFF6EB; }
 
 body { background-position: 50% 50%; background-size: 20px 20px; background-color: #FFF6EB; background-image: linear-gradient(90deg, #FFE7D3, 1px, transparent 0), linear-gradient(#FFE7D3, 1px, transparent 0); }
 
-input::-webkit-calendar-picker-indicator { position: absolute; top: 0; left: 0; opacity: 0; width: 100%; height: 100%; }
+main .input-group { margin: 30px auto; display: flex; flex-direction: column; }
 
-main .input-group { margin: 30px auto; }
+main .input-group .form-control { border-radius: 5px !important; margin-left: 0px !important; padding: 10px 15px; border-color: #58391C; color: #58391C; width: 100%; }
 
-main .input-group .form-control { border-radius: 5px !important; margin-left: 0px !important; padding: 10px 15px; border-color: #58391C; color: #58391C; width: 80%; }
+main .input-group .form-control.form-control-gender { display: flex; }
+
+main .input-group .form-control.form-control-gender .radio-item { margin: 0 20px 0 0; }
+
+main .input-group .form-control.form-control-gender .radio-item label { display: flex; align-items: center; color: #58391C; font-weight: normal; position: relative; cursor: pointer; }
+
+main .input-group .form-control.form-control-gender .radio-item label:before { content: " "; display: inline-block; top: 0; margin: 0 8px 0 0; width: 16px; height: 16px; border-radius: 50%; position: relative; border: 2px solid #58391C; }
+
+main .input-group .form-control.form-control-gender .radio-item input[type="radio"] { display: none; }
+
+main .input-group .form-control.form-control-gender .radio-item input[type="radio"]:checked + label { color: #FF6000; }
+
+main .input-group .form-control.form-control-gender .radio-item input[type="radio"]:checked + label:before { border: 2px solid #FF6000; background: radial-gradient(#FF6000 0%, #FF6000 40%, transparent 50%, transparent); }
+
+main .input-group .form-control[type=date]:before { font-family: "Font Awesome 5 Free"; font-weight: 450; content: "\f133"; position: absolute; right: 15px; }
+
+main .input-group .form-control[type=date]:required:invalid::-webkit-datetime-edit { color: transparent; }
+
+main .input-group .form-control[type=date]::-webkit-calendar-picker-indicator { position: absolute; top: 0; left: 0; opacity: 0; width: 100%; height: 100%; cursor: pointer; }
+
+main .input-group .form-control[type=date]:focus::-webkit-datetime-edit-text, main .input-group .form-control[type=date]:focus::-webkit-datetime-edit-day-field, main .input-group .form-control[type=date]:focus::-webkit-datetime-edit-month-field, main .input-group .form-control[type=date]:focus::-webkit-datetime-edit-year-field { background-color: #FF6000; color: #fff; }
 
 main .input-group .form-control::placeholder { color: #58391C; }
 
@@ -78,45 +98,11 @@ main .input-group .form-control:focus { outline: none; border-color: #FF6000; bo
 
 main .input-group .form-control:focus::placeholder { color: transparent; }
 
-main .input-group .form-control::-webkit-calendar-picker-indicator { position: absolute; top: 0; left: 0; opacity: 0; width: 100%; height: 100%; }
+@media screen and (min-width: 768px) { main .input-group .form-control.form-control-gender { border-color: transparent; background-color: transparent; }
+  main .input-group .form-control.form-control-gender .radio-item { margin: 0 40px 0 0; }
+  main .input-group .form-control.form-control-gender .radio-item label:before { margin: 0 10px 0 0; } }
 
-main .input-group .form-control[type=date]:required:invalid::-webkit-datetime-edit { color: transparent; }
-
-main .input-group .form-control[type=date]::-webkit-datetime-edit-text, main .input-group .form-control[type=date]::-webkit-datetime-edit-day-field, main .input-group .form-control[type=date]::-webkit-datetime-edit-month-field, main .input-group .form-control[type=date]::-webkit-datetime-edit-year-field { margin: 0; padding: 0; letter-spacing: 0; }
-
-main .input-group .form-control[type=date]:focus::placeholder { color: transparent; }
-
-main .input-group .form-control[type=date]:focus::-webkit-datetime-edit-text, main .input-group .form-control[type=date]:focus::-webkit-datetime-edit-day-field, main .input-group .form-control[type=date]:focus::-webkit-datetime-edit-month-field, main .input-group .form-control[type=date]:focus::-webkit-datetime-edit-year-field { background-color: #FF6000; color: #fff; }
-
-main .input-group .form-control[type=date]:focus:before, main .input-group .form-control[type=date]:valid:before { content: "" !important; }
-
-main .input-group .input_date_icon { position: absolute; right: 15px; top: 10px; z-index: 11; pointer-events: none; user-select: none; color: #58391C; }
-
-main .input-group .select-wrap { width: 80%; position: relative; margin-left: 0 !important; }
-
-main .input-group .select-wrap .form-select { -webkit-appearance: none; color: #58391C; padding: 10px 40px 10px 12px; border: 1px solid #58391C; border-radius: 5px !important; line-height: 1.7; background-color: #fff; background-image: none; cursor: pointer; }
-
-main .input-group .select-wrap .form-select option { color: #58391C; padding: 5px 10px; }
-
-main .input-group .select-wrap .form-select option:hover { background: #ff904d !important; }
-
-main .input-group .select-wrap .form-select option:checked { box-shadow: 0 0 0px 100px #FF6000 inset; }
-
-main .input-group .select-wrap .form-select:focus { outline: none; border-color: #FF6000; border-radius: 5px; }
-
-main .input-group .select-wrap .form-select:required, main .input-group .select-wrap .form-select:invalid { color: #ADADAD; }
-
-main .input-group .select-wrap .select_icon { position: absolute; right: 12px; top: 10px; transform: translate(0, 0%); z-index: 11; pointer-events: none; user-select: none; transition: 0.3s; }
-
-main .input-group .select-wrap:focus-within .form-select { position: absolute; right: 0; width: 100%; z-index: 10; }
-
-main .input-group .select-wrap:focus-within .form-select option { color: #58391C; padding: 5px 10px; }
-
-main .input-group .select-wrap:focus-within .form-select option:disabled { display: none; }
-
-main .input-group .select-wrap:focus-within .select_icon { transform: rotate(180deg); }
-
-footer .bottom_menu { background-color: #FFF6EB; border-top: 1px solid #58391C; width: 100%; display: flex; justify-content: space-around; padding: 20px 0px 40px; position: fixed; bottom: 0; left: 50%; transform: translate(-50%, 0px); }
+footer .bottom_menu { background-color: #FFF6EB; border-top: 1px solid #58391C; width: 100%; display: flex; justify-content: space-around; padding: 20px 0px 40px; position: fixed; z-index: 10; bottom: 0; left: 50%; transform: translate(-50%, 0px); }
 
 footer .bottom_menu .bottom_menu_item a { display: flex; margin: 10px 20px; }
 
@@ -137,8 +123,6 @@ footer .bottom_menu .bottom_menu_item a .bottom_menu_item_text p { color: #58391
 main .login_area { padding: 100px 0 40px; max-width: 500px; margin: 0 auto; width: 80%; }
 
 main .login_area .login_title { color: #FF6000; }
-
-main .login_area .input-group { margin: 30px auto; }
 
 main .login_area .input-group .input-group-text { border: 0px; padding: 10px 15px; position: absolute; z-index: 1; left: 0; top: 50%; transform: translate(0, -50%); background-color: transparent; }
 
@@ -166,7 +150,7 @@ main .top_tittle { width: 90%; max-width: 1200px; margin: 60px auto 0px; display
 
 main .top_tittle h3 { color: #fff; }
 
-main .test_area { background-color: #F3F3F3; border: 1px solid #FF6000; border-radius: 0 0 10px 10px; padding: 40px 5%; width: 90%; margin: 0px auto 150px; max-width: 1200px; }
+main .test_area { background-color: #F3F3F3; border: 1px solid #FF6000; border-radius: 0 0 10px 10px; padding: 40px 5%; width: 90%; margin: 0px auto 170px; max-width: 1200px; }
 
 main .test_area .test_area_avatar .test_area_avatar_img { width: 80%; max-width: 80px; margin: 0 auto; padding: 10px; border: 1px solid #FF6000; border-radius: 50%; background-color: #fff; overflow: hidden; }
 
@@ -257,7 +241,7 @@ main .test_area .function_btn_area .main_function_btn_area .main_function_btn_it
   100% { opacity: 1;
     height: 40px; } }
 
-@media screen and (min-width: 768px) { main .test_area { margin: 0px auto 175px; }
+@media screen and (min-width: 768px) { main .test_area { margin: 0px auto 195px; }
   main .test_area .test_topic_area { margin: 60px auto; }
   main .test_area .sound_bar_area { margin: 60px auto; }
   main .test_area .function_btn_area .function_btn_item { width: 50px; height: 50px; }
@@ -495,10 +479,10 @@ main .top_tittle h3 { color: #fff; }
 
 main .input-group { display: flex; align-items: flex-start; }
 
-main .input-group .input-group-label { padding: 10px 15px; color: #58391C; width: 20%; }
+main .input-group .input-group-label { padding: 10px 15px; color: #58391C; width: 100%; }
 
-@media screen and (min-width: 768px) { main .test_area { margin: 0px auto 175px; }
-  main .test_area .test_topic_area { margin: 60px auto; }
-  main .test_area .sound_bar_area { margin: 60px auto; }
-  main .test_area .function_btn_area .function_btn_item { width: 50px; height: 50px; }
-  main .test_area .function_btn_area .function_btn_item i { font-size: 25px; } }
+main .input-group .input_date_icon { position: absolute; right: 15px; top: 10px; z-index: 1; pointer-events: none; user-select: none; color: #58391C; }
+
+@media screen and (min-width: 768px) { main .input-group { flex-direction: row; }
+  main .input-group .input-group-label { width: 20%; }
+  main .input-group .form-control { width: 80%; } }
