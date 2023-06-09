@@ -60,33 +60,7 @@ main {
             }
         }
 
-        .button_login {
-            padding: 8px 10px;
-            background-color: $main_color;
-            width: 100%;
-            margin: 30px auto;
-            color: $white;
-            border-radius: 50px;
-            border: 1px solid $main_color;
-
-            &:hover {
-                transform: scale(1.05);
-                background-color: darken($main_color, 5%);
-            }
-        }
-
-        .button_register {
-            padding: 8px 10px;
-            width: 100%;
-            color: $main_color;
-            border-radius: 50px;
-            border: 1px solid $main_color;
-
-            &:hover {
-                color: $white;
-                background-color: $main_color;
-            }
-        }
+        
     }
 }
 

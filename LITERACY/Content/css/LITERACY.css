@@ -98,6 +98,14 @@ main .input-group .form-control:focus { outline: none; border-color: #FF6000; bo
 
 main .input-group .form-control:focus::placeholder { color: transparent; }
 
+main .button_login { display: block; padding: 8px 10px; background-color: #FF6000; width: 100%; max-width: 500px; margin: 60px auto 30px; color: #fff; border-radius: 50px; border: 1px solid #FF6000; }
+
+main .button_login:hover { transform: scale(1.05); background-color: #e65600; }
+
+main .button_register { display: block; padding: 8px 10px; width: 100%; max-width: 500px; color: #FF6000; border-radius: 50px; border: 1px solid #FF6000; }
+
+main .button_register:hover { color: #fff; background-color: #FF6000; }
+
 @media screen and (min-width: 768px) { main .input-group .form-control.form-control-gender { border-color: transparent; background-color: transparent; }
   main .input-group .form-control.form-control-gender .radio-item { margin: 0 40px 0 0; }
   main .input-group .form-control.form-control-gender .radio-item label:before { margin: 0 10px 0 0; } }
@@ -138,19 +146,11 @@ main .login_area .input-group .form-control:placeholder-shown + .input-group-tex
 
 main .login_area .input-group .form-control::-webkit-input-placeholder { position: relative; left: calc(19px + 15px); }
 
-main .login_area .button_login { padding: 8px 10px; background-color: #FF6000; width: 100%; margin: 30px auto; color: #fff; border-radius: 50px; border: 1px solid #FF6000; }
-
-main .login_area .button_login:hover { transform: scale(1.05); background-color: #e65600; }
-
-main .login_area .button_register { padding: 8px 10px; width: 100%; color: #FF6000; border-radius: 50px; border: 1px solid #FF6000; }
-
-main .login_area .button_register:hover { color: #fff; background-color: #FF6000; }
-
-main .top_tittle { width: 90%; max-width: 1200px; margin: 60px auto 0px; display: flex; justify-content: center; background-color: #FF6000; border: 1px solid #FF6000; border-radius: 10px 10px 0 0; padding: 5px 20px; }
+main .top_tittle { width: 90%; max-width: 1000px; margin: 60px auto 0px; display: flex; justify-content: center; background-color: #FF6000; border: 1px solid #FF6000; border-radius: 10px 10px 0 0; padding: 5px 20px; }
 
 main .top_tittle h3 { color: #fff; }
 
-main .test_area { background-color: #F3F3F3; border: 1px solid #FF6000; border-radius: 0 0 10px 10px; padding: 40px 5%; width: 90%; margin: 0px auto 170px; max-width: 1200px; }
+main .test_area { background-color: #F3F3F3; border: 1px solid #FF6000; border-radius: 0 0 10px 10px; padding: 40px 5%; width: 90%; margin: 0px auto 170px; max-width: 1000px; }
 
 main .test_area .test_area_avatar .test_area_avatar_img { width: 80%; max-width: 80px; margin: 0 auto; padding: 10px; border: 1px solid #FF6000; border-radius: 50%; background-color: #fff; overflow: hidden; }
 
@@ -473,10 +473,6 @@ main .test_area .quiz_answer_area .answer_display_area .answer_display_area_item
   main .test_area .quiz_answer_area .answer_display_area .answer_display_area_item .answer_item_text.answer_item_english p { font-size: 30px; }
   main .test_area .quiz_answer_area .answer_display_area .answer_display_area_item .answer_item_text.answer_item_chinese p { font-size: 20px; } }
 
-main .top_tittle { width: 90%; max-width: 1200px; margin: 60px auto 0px; display: flex; justify-content: center; background-color: #FF6000; border: 1px solid #FF6000; border-radius: 10px 10px 0 0; padding: 5px 20px; }
-
-main .top_tittle h3 { color: #fff; }
-
 main .input-group { display: flex; align-items: flex-start; }
 
 main .input-group .input-group-label { padding: 10px 15px; color: #58391C; width: 100%; }
@@ -486,3 +482,65 @@ main .input-group .input_date_icon { position: absolute; right: 15px; top: 10px;
 @media screen and (min-width: 768px) { main .input-group { flex-direction: row; }
   main .input-group .input-group-label { width: 20%; }
   main .input-group .form-control { width: 80%; } }
+
+main .test_area .instructions { display: flex; justify-content: center; margin: 0px auto 20px; }
+
+main .test_area .instructions p { color: #58391C; }
+
+main .test_area .score_report_area .score_report_header { display: flex; justify-content: flex-end; padding: 15px 0; background-color: #FF6000; border: 1px solid #58391C; border-bottom: 0; }
+
+main .test_area .score_report_area .score_report_header .score_report_header_text { color: #fff; text-align: center; }
+
+main .test_area .score_report_area .score_report_body { border: 1px solid #58391C; border-top: 0; background-color: #fff; }
+
+main .test_area .score_report_area .score_report_body .score_report_item { position: relative; display: flex; align-items: center; border-top: 1px solid #58391C; cursor: pointer; }
+
+main .test_area .score_report_area .score_report_body .score_report_item .score_report_item_content { padding: 15px 8px; }
+
+main .test_area .score_report_area .score_report_body .score_report_item .score_report_item_content.score_report_item_icon { width: 37.5px; text-align: center; border: 0px; }
+
+main .test_area .score_report_area .score_report_body .score_report_item .score_report_item_content.score_report_item_icon .fa-circle-check { color: #ADADAD; font-size: 20px; }
+
+main .test_area .score_report_area .score_report_body .score_report_item .score_report_item_content.score_report_item_text { text-align: center; color: #58391C; }
+
+main .test_area .score_report_area .score_report_body .score_report_item .score_report_item_content.score_report_item_text.score_report_item_name p { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+main .test_area .score_report_area .score_report_body .score_report_item .score_report_item_content.score_report_item_text.score_report_item_time { display: flex; flex-wrap: wrap; justify-content: center; }
+
+main .test_area .score_report_area .score_report_body .score_report_item .score_report_item_content.score_report_item_text.score_report_item_time .text_date { margin: 0 10px 0 0; }
+
+main .test_area .score_report_area .score_report_body .score_report_item.check_item { background-color: #FF600030; }
+
+main .test_area .score_report_area .score_report_body .score_report_item.check_item .score_report_item_content.score_report_item_icon .fa-circle-check { color: #FF6000; }
+
+main .test_area .score_report_area .score_report_body .score_report_item.check_item .score_report_item_content.score_report_item_text { color: #FF6000; }
+
+main .test_area .score_report_area .score_report_body .score_report_item::before, main .test_area .score_report_area .score_report_body .score_report_item::after { content: ""; position: absolute; width: 1px; height: 100%; background-color: #58391C; bottom: 0; }
+
+main .test_area .score_report_area .score_report_body .score_report_item::before { left: 37.5px; }
+
+main .test_area .score_report_area .score_report_body .score_report_item::after { left: calc(45% + 15px); }
+
+main .test_area .score_report_area .score_report_body .score_report_item:nth-child(1) { border-top: 0px; }
+
+main .test_area .score_report_area .score_report_header_name, main .test_area .score_report_area .score_report_item_name { width: calc(45% - 15px); }
+
+main .test_area .score_report_area .score_report_header_time, main .test_area .score_report_area .score_report_item_time { width: calc(55% - 15px); }
+
+@media screen and (min-width: 576px) { main .test_area .score_report_area .score_report_body .score_report_item .score_report_item_content { padding: 15px 10px; }
+  main .test_area .score_report_area .score_report_body .score_report_item .score_report_item_content.score_report_item_icon { width: 50px; }
+  main .test_area .score_report_area .score_report_body .score_report_item .score_report_item_content.score_report_item_icon .fa-circle-check { font-size: 25px; }
+  main .test_area .score_report_area .score_report_body .score_report_item::before { left: 50px; }
+  main .test_area .score_report_area .score_report_body .score_report_item::after { left: calc(45% + 25px); }
+  main .test_area .score_report_area .score_report_header_name, main .test_area .score_report_area .score_report_item_name { width: calc(45% - 25px); }
+  main .test_area .score_report_area .score_report_header_time, main .test_area .score_report_area .score_report_item_time { width: calc(55% - 25px); } }
+
+@media screen and (min-width: 768px) { main .test_area .instructions { margin: 0px auto 40px; }
+  main .test_area .score_report_area .score_report_header { padding: 25px 0; }
+  main .test_area .score_report_area .score_report_body .score_report_item .score_report_item_content { padding: 25px 15px; }
+  main .test_area .score_report_area .score_report_body .score_report_item .score_report_item_content.score_report_item_icon { width: 66.5px; }
+  main .test_area .score_report_area .score_report_body .score_report_item .score_report_item_content.score_report_item_icon .fa-circle-check { font-size: 35px; }
+  main .test_area .score_report_area .score_report_body .score_report_item::before { left: 66.5px; }
+  main .test_area .score_report_area .score_report_body .score_report_item::after { left: calc(45% + 33.25px); }
+  main .test_area .score_report_area .score_report_header_name, main .test_area .score_report_area .score_report_item_name { width: calc(45% - 25px); }
+  main .test_area .score_report_area .score_report_header_time, main .test_area .score_report_area .score_report_item_time { width: calc(55% - 25px); } }
