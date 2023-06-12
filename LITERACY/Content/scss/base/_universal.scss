@@ -5,6 +5,7 @@ body {
     background-image: linear-gradient(90deg, $body_line_color, 1px, transparent 0), linear-gradient($body_line_color, 1px, transparent 0);
 }
 
+
 main {
     .input-group {
         margin: 30px auto;
@@ -15,14 +16,14 @@ main {
             border-radius: 5px !important;
             margin-left: 0px !important;
             padding: 10px 15px;
-            border-color: $main_color_brown;
+            border: 1px solid $main_color_brown !important;
             color: $main_color_brown;
             width: 100%;
 
-            &.form-control-gender{
+            &.form-control-gender {
                 display: flex;
 
-                .radio-item{
+                .radio-item {
                     margin: 0 20px 0 0;
 
                     label {
@@ -32,7 +33,7 @@ main {
                         font-weight: normal;
                         position: relative;
                         cursor: pointer;
-        
+
                         &:before {
                             content: " ";
                             display: inline-block;
@@ -45,12 +46,14 @@ main {
                             border: 2px solid $main_color_brown;
                         }
                     }
-        
+
                     input[type="radio"] {
                         display: none;
+
                         &:checked {
                             &+label {
                                 color: $main_color;
+
                                 &:before {
                                     border: 2px solid $main_color;
                                     background: radial-gradient($main_color 0%, $main_color 40%, transparent 50%, transparent);
@@ -61,19 +64,19 @@ main {
                 }
             }
 
-            &[type=date]{
-                
+            &[type=date] {
+
 
                 &:before {
                     font-family: "Font Awesome 5 Free";
-                    font-weight: 450; 
+                    font-weight: 450;
                     content: "\f133";
                     position: absolute;
                     right: 15px;
-                  }
+                }
 
-                &:required:invalid{
-                    &::-webkit-datetime-edit{
+                &:required:invalid {
+                    &::-webkit-datetime-edit {
                         color: transparent;
                     }
                 }
@@ -93,18 +96,17 @@ main {
                     &::-webkit-datetime-edit-text,
                     &::-webkit-datetime-edit-day-field,
                     &::-webkit-datetime-edit-month-field,
-                    &::-webkit-datetime-edit-year-field{
+                    &::-webkit-datetime-edit-year-field {
                         background-color: $main_color;
                         color: $white;
                     }
                 }
 
                 &:focus,
-                &:valid{
-                    &:before {
-                      }
+                &:valid {
+                    &:before {}
                 }
-                
+
             }
 
             &::placeholder {
@@ -112,74 +114,134 @@ main {
             }
 
             &:focus {
+                position: relative;
+                z-index: 3;
                 outline: none;
-                border-color: $main_color;
+                border: 1px solid $main_color !important;
                 @extend %boxShadow;
                 border-radius: 5px;
+                color: $main_color;
 
                 &::placeholder {
                     color: transparent;
                 }
             }
+
+            &:placeholder-shown {
+                &+.input-group-text {
+                    i {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .input-group-text {
+            border: 0px;
+            padding: 10px 15px;
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            background-color: transparent;
+
+            i {
+                color: $main_color_brown;
+                display: none;
+            }
+
+            &.icon_eye {
+                z-index: 4;
+                right: 0;
+                left: auto;
+                cursor: pointer;
+
+                i {
+                    display: block;
+                }
+            }
+        }
+
+        .password_input {
+            position: relative;
+            width: 100%;
+
+            .form-control {
+                width: 100%;
+            }
         }
     }
 
-    .button_login {
-        display: block;
-        padding: 8px 10px;
-        background-color: $main_color;
-        width: 100%;
-        max-width: 500px;
-        margin: 60px auto 30px;
-        color: $white;
-        border-radius: 50px;
-        border: 1px solid $main_color;
-
-        &:hover {
-            transform: scale(1.05);
-            background-color: darken($main_color, 5%);
-        }
-    }
-
-    .button_register {
+    .button {
         display: block;
         padding: 8px 10px;
         width: 100%;
         max-width: 500px;
-        color: $main_color;
         border-radius: 50px;
         border: 1px solid $main_color;
+        margin: 80px auto 30px;
 
-        &:hover {
-            color: $white;
+        &.solid_color{
             background-color: $main_color;
+            color: $white;
+    
+            &:hover {
+                transform: scale(1.05);
+                background-color: darken($main_color, 5%);
+            }
+        }
+
+        &.line_color{
+            color: $main_color;
+    
+            &:hover {
+                color: $white;
+                background-color: $main_color;
+            }
+        }
+
+        &.button_register{
+            margin: 0px auto;
         }
     }
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus { 
+    border: 1px solid $main_color_brown;
+  -webkit-text-fill-color: $main_color_brown;
+  -webkit-box-shadow: 0 0 0px 1000px $white inset !important;
+  }
 
 @media screen and (min-width: 576px) {}
 
 @media screen and (min-width: 768px) {
     main {
         .input-group {
-    
+
             .form-control {
-    
-                &.form-control-gender{
+
+                &.form-control-gender {
                     border-color: transparent;
                     background-color: transparent;
 
-                    .radio-item{
+                    .radio-item {
                         margin: 0 40px 0 0;
 
                         label {
-            
+
                             &:before {
                                 margin: 0 10px 0 0;
                             }
                         }
                     }
                 }
+            }
+
+            .password_input {
+                width: 80%;
             }
         }
     }

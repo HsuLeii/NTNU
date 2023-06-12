@@ -22,8 +22,8 @@
   <!-- 之後改成正式網址的連結 -->
   <!-- <meta itemprop="image" content="https://hsuleii.github.io/SmartPhonics/Content/image/main/og_image.jpg">
   <link rel="shortcut icon" type="image/x-icon" href="Content/image/favicon.ico" /> -->
-  
-  
+
+
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="Content/css/bootstrap-5.1.1.min.css" />
 
@@ -38,29 +38,35 @@
       <div class="page_title login_title">
         <h3 class="text_center">登入</h3>
       </div>
-      <div class="input-group">
 
-        <input type="text" class="form-control" id="inputGroupUser" placeholder="請輸入你的帳號" aria-label="請輸入你的帳號"
-          aria-describedby="basic-addon1" />
-        <label class="input-group-text icon_user" for="inputGroupUser">
-          <i class="fa-solid fa-user"></i>
-        </label>
-      </div>
+      <form action="">
+        <div class="input-group">
 
-      <div class="input-group show_hide_password">
-          <button class="input-group-text icon_eye">
-            <i class="fas fa-eye-slash"></i>
-          </button>
-          <input type="password" class="form-control input_password" id="inputGroupPassword" placeholder="請輸入你的密碼"
-            aria-label="請輸入你的密碼" aria-describedby="basic-addon2" />  
+          <input type="text" class="form-control" id="inputGroupUser" placeholder="請輸入你的帳號" aria-label="請輸入你的帳號"
+            aria-describedby="basic-addon1" />
+          <label class="input-group-text icon_user" for="inputGroupUser">
+            <i class="fa-solid fa-user"></i>
+          </label>
+        </div>
+  
+        <div class="input-group show_hide_password">
+          <div class="password_input">
+            <input type="password" class="form-control input_password" id="inputGroupPassword" placeholder="請輸入你的密碼" />
+            <label class="input-group-text icon_password" for="inputGroupPassword">
+              <i class="fa-solid fa-lock"></i>
+            </label>
+            <div class="input-group-text icon_eye">
+              <i class="fas fa-eye-slash"></i>
+            </div>
+          </div>
+  
+        </div>
 
-        <label class="input-group-text icon_password" for="inputGroupPassword">
-          <i class="fa-solid fa-lock"></i>
-        </label>
-      </div>
-
-      <button type="submit" class="button_login" onclick="location.href='TEST/personal.html'">登入</button>
-      <button type="submit" class="button_register">註冊</button>
+        <button type="submit" class="button solid_color button_login" onclick="location.href='TEST/personal.html'">登入</button>
+        <button type="submit" class="button line_color button_register">註冊</button>
+  
+      </form>
+      
     </div>
 
   </main>
@@ -73,7 +79,6 @@
   <!-- this page widgets JS -->
   <script src="Content/js/show_hide_password.js"></script>
 
-  <script src="Content/js/all.js"></script>
 </body>
 
 </html>

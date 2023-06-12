@@ -1,6 +1,5 @@
 //密碼顯示/隱藏
 	$(".icon_eye").on('click', function(event) {
-		event.preventDefault();
 		if( $(this).siblings('.input_password').val() != "" ){
 			if( $(this).siblings('.input_password').attr("type") == "text"){//原本是顯示密碼
 				$(this).siblings('.input_password').attr('type', 'password');//變成隱藏密碼

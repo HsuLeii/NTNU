@@ -11,56 +11,19 @@ main {
         }
 
         .input-group {
-
-            .input-group-text {
-                border: 0px;
-                padding: 10px 15px;
-                position: absolute;
-                z-index: 1;
-                left: 0;
-                top: 50%;
-                transform: translate(0, -50%);
-                background-color: transparent;
-
-                i {
-                    color: $main_color_brown;
-                    display: none;
-                }
-
-                &.icon_eye {
-                    z-index: 4;
-                    right: 0;
-                    left: auto;
-                    cursor: pointer;
-
-                    i {
-                        display: block;
-                    }
-                }
-            }
-
-
             .form-control {
                 padding: 10px 100px 10px 15px;
-
-                &:placeholder-shown {
-                    &+.input-group-text {
-                        i {
-                            display: block;
-                        }
-                    }
-
-                }
 
                 &::-webkit-input-placeholder {
                     position: relative;
                     left: calc(19px + 15px);
                 }
+            }
 
+            .password_input {
+                width: 100%;
             }
         }
-
-        
     }
 }
 

@@ -68,7 +68,7 @@ body { background-position: 50% 50%; background-size: 20px 20px; background-colo
 
 main .input-group { margin: 30px auto; display: flex; flex-direction: column; }
 
-main .input-group .form-control { border-radius: 5px !important; margin-left: 0px !important; padding: 10px 15px; border-color: #58391C; color: #58391C; width: 100%; }
+main .input-group .form-control { border-radius: 5px !important; margin-left: 0px !important; padding: 10px 15px; border: 1px solid #58391C !important; color: #58391C; width: 100%; }
 
 main .input-group .form-control.form-control-gender { display: flex; }
 
@@ -94,21 +94,42 @@ main .input-group .form-control[type=date]:focus::-webkit-datetime-edit-text, ma
 
 main .input-group .form-control::placeholder { color: #58391C; }
 
-main .input-group .form-control:focus { outline: none; border-color: #FF6000; border-radius: 5px; }
+main .input-group .form-control:focus { position: relative; z-index: 3; outline: none; border: 1px solid #FF6000 !important; border-radius: 5px; color: #FF6000; }
 
 main .input-group .form-control:focus::placeholder { color: transparent; }
 
-main .button_login { display: block; padding: 8px 10px; background-color: #FF6000; width: 100%; max-width: 500px; margin: 60px auto 30px; color: #fff; border-radius: 50px; border: 1px solid #FF6000; }
+main .input-group .form-control:placeholder-shown + .input-group-text i { display: block; }
 
-main .button_login:hover { transform: scale(1.05); background-color: #e65600; }
+main .input-group .input-group-text { border: 0px; padding: 10px 15px; position: absolute; z-index: 1; left: 0; top: 50%; transform: translate(0, -50%); background-color: transparent; }
 
-main .button_register { display: block; padding: 8px 10px; width: 100%; max-width: 500px; color: #FF6000; border-radius: 50px; border: 1px solid #FF6000; }
+main .input-group .input-group-text i { color: #58391C; display: none; }
 
-main .button_register:hover { color: #fff; background-color: #FF6000; }
+main .input-group .input-group-text.icon_eye { z-index: 4; right: 0; left: auto; cursor: pointer; }
+
+main .input-group .input-group-text.icon_eye i { display: block; }
+
+main .input-group .password_input { position: relative; width: 100%; }
+
+main .input-group .password_input .form-control { width: 100%; }
+
+main .button { display: block; padding: 8px 10px; width: 100%; max-width: 500px; border-radius: 50px; border: 1px solid #FF6000; margin: 80px auto 30px; }
+
+main .button.solid_color { background-color: #FF6000; color: #fff; }
+
+main .button.solid_color:hover { transform: scale(1.05); background-color: #e65600; }
+
+main .button.line_color { color: #FF6000; }
+
+main .button.line_color:hover { color: #fff; background-color: #FF6000; }
+
+main .button.button_register { margin: 0px auto; }
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus { border: 1px solid #58391C; -webkit-text-fill-color: #58391C; -webkit-box-shadow: 0 0 0px 1000px #fff inset !important; }
 
 @media screen and (min-width: 768px) { main .input-group .form-control.form-control-gender { border-color: transparent; background-color: transparent; }
   main .input-group .form-control.form-control-gender .radio-item { margin: 0 40px 0 0; }
-  main .input-group .form-control.form-control-gender .radio-item label:before { margin: 0 10px 0 0; } }
+  main .input-group .form-control.form-control-gender .radio-item label:before { margin: 0 10px 0 0; }
+  main .input-group .password_input { width: 80%; } }
 
 footer .bottom_menu { background-color: #FFF6EB; border-top: 1px solid #58391C; width: 100%; display: flex; justify-content: space-around; padding: 20px 0px 40px; position: fixed; z-index: 10; bottom: 0; left: 50%; transform: translate(-50%, 0px); }
 
@@ -132,19 +153,11 @@ main .login_area { padding: 100px 0 40px; max-width: 500px; margin: 0 auto; widt
 
 main .login_area .login_title { color: #FF6000; }
 
-main .login_area .input-group .input-group-text { border: 0px; padding: 10px 15px; position: absolute; z-index: 1; left: 0; top: 50%; transform: translate(0, -50%); background-color: transparent; }
-
-main .login_area .input-group .input-group-text i { color: #58391C; display: none; }
-
-main .login_area .input-group .input-group-text.icon_eye { z-index: 4; right: 0; left: auto; cursor: pointer; }
-
-main .login_area .input-group .input-group-text.icon_eye i { display: block; }
-
 main .login_area .input-group .form-control { padding: 10px 100px 10px 15px; }
 
-main .login_area .input-group .form-control:placeholder-shown + .input-group-text i { display: block; }
-
 main .login_area .input-group .form-control::-webkit-input-placeholder { position: relative; left: calc(19px + 15px); }
+
+main .login_area .input-group .password_input { width: 100%; }
 
 main .top_tittle { width: 90%; max-width: 1000px; margin: 60px auto 0px; display: flex; justify-content: center; background-color: #FF6000; border: 1px solid #FF6000; border-radius: 10px 10px 0 0; padding: 5px 20px; }
 
