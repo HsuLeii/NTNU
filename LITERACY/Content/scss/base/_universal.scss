@@ -7,10 +7,11 @@ body {
 
 
 main {
-    .input-group {
+    .input_area {
         margin: 30px auto;
         display: flex;
         flex-direction: column;
+        position: relative;
 
         .form-control {
             border-radius: 5px !important;
@@ -19,7 +20,8 @@ main {
             border: 1px solid $main_color_brown !important;
             color: $main_color_brown;
             width: 100%;
-
+            position: relative;
+            
             &.form-control-gender {
                 display: flex;
 
@@ -64,49 +66,60 @@ main {
                 }
             }
 
-            &[type=date] {
+            &.form-control-birthday {
 
-
-                &:before {
-                    font-family: "Font Awesome 5 Free";
-                    font-weight: 450;
+                &::before {
                     content: "\f133";
+                }
+
+                svg{
                     position: absolute;
                     right: 15px;
+                    top: 50%;
+                    transform: translate(0 , -50%);
                 }
 
-                &:required:invalid {
-                    &::-webkit-datetime-edit {
-                        color: transparent;
-                    }
-                }
-
-                &::-webkit-calendar-picker-indicator {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    opacity: 0;
+                .birthday_input {
+                    color: $main_color_brown;
                     width: 100%;
-                    height: 100%;
-                    cursor: pointer;
-                }
-
-                &:focus {
-
-                    &::-webkit-datetime-edit-text,
-                    &::-webkit-datetime-edit-day-field,
-                    &::-webkit-datetime-edit-month-field,
-                    &::-webkit-datetime-edit-year-field {
-                        background-color: $main_color;
-                        color: $white;
+                    outline: 0;
+                    background-color: transparent;
+                    position: relative;
+                    z-index: 1;
+                    
+                    &:valid {
+                        border: 0;
                     }
-                }
 
-                &:focus,
-                &:valid {
-                    &:before {}
-                }
+                    &:required:invalid {
+                        &::-webkit-datetime-edit {
+                            color: transparent;
+                        }
+                    }
 
+                    &::-webkit-calendar-picker-indicator {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+                        width: 100%;
+                        height: 100%;
+                        cursor: pointer;
+                    }
+
+                    &:focus {
+
+                        &::-webkit-datetime-edit-text,
+                        &::-webkit-datetime-edit-day-field,
+                        &::-webkit-datetime-edit-month-field,
+                        &::-webkit-datetime-edit-year-field {
+                            background-color: $main_color;
+                            color: $white;
+                            border: 0px;
+                        }
+                    }
+
+                }
             }
 
             &::placeholder {
@@ -129,7 +142,7 @@ main {
 
             &:placeholder-shown {
                 &+.input-group-text {
-                    i {
+                    svg {
                         display: block;
                     }
                 }
@@ -146,7 +159,7 @@ main {
             transform: translate(0, -50%);
             background-color: transparent;
 
-            i {
+            svg {
                 color: $main_color_brown;
                 display: none;
             }
@@ -157,7 +170,7 @@ main {
                 left: auto;
                 cursor: pointer;
 
-                i {
+                svg {
                     display: block;
                 }
             }
@@ -169,6 +182,7 @@ main {
 
             .form-control {
                 width: 100%;
+                padding: 10px 100px 10px 15px;
             }
         }
     }
@@ -182,49 +196,49 @@ main {
         border: 1px solid $main_color;
         margin: 80px auto 30px;
 
-        &.solid_color{
+        &.solid_color {
             background-color: $main_color;
             color: $white;
-    
+
             &:hover {
                 transform: scale(1.05);
                 background-color: darken($main_color, 5%);
             }
         }
 
-        &.line_color{
+        &.line_color {
             color: $main_color;
-    
+
             &:hover {
                 color: $white;
                 background-color: $main_color;
             }
         }
 
-        &.button_register{
+        &.button_register {
             margin: 0px auto;
         }
     }
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus { 
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
     border: 1px solid $main_color_brown;
-  -webkit-text-fill-color: $main_color_brown;
-  -webkit-box-shadow: 0 0 0px 1000px $white inset !important;
-  }
+    -webkit-text-fill-color: $main_color_brown;
+    -webkit-box-shadow: 0 0 0px 1000px $white inset !important;
+}
 
 @media screen and (min-width: 576px) {}
 
 @media screen and (min-width: 768px) {
     main {
-        .input-group {
+        .input_area {
 
             .form-control {
 
                 &.form-control-gender {
-                    border-color: transparent;
+                    border: 1px solid transparent !important;
                     background-color: transparent;
 
                     .radio-item {

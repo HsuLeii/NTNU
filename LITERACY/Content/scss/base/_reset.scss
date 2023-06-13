@@ -1,4 +1,4 @@
-%boxShadow{
+%boxShadow {
     box-shadow: 5px 5px 10px 3px $main_color_25;
 }
 
@@ -111,7 +111,8 @@ button:disabled {
     border: 1px solid $grey !important;
     opacity: 0.5;
     cursor: auto !important;
-    a{
+
+    a {
         color: $white !important;
         cursor: auto;
     }
@@ -131,8 +132,28 @@ body {
     cursor: pointer;
 }
 
-.text_center {
-    text-align: center;
+.icon::before {
+    display: none;
+}
+
+.icon-solid::before {
+    font: var(--fa-font-solid);
+}
+
+.icon-regular::before {
+    font: var(--fa-font-regular);
+}
+
+.icon-light::before {
+    font: var(--fa-font-light);
+}
+
+.icon-duotone::before {
+    font: var(--fa-font-duotone);
+}
+
+.icon-brands::before {
+    font: var(--fa-font-brands);
 }
 
 ::selection {

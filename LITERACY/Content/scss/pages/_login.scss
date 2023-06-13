@@ -8,11 +8,15 @@ main {
 
         .login_title {
             color: $main_color;
+            h3{
+                text-align: center;
+            }
         }
 
-        .input-group {
+        .input_area {
             .form-control {
                 padding: 10px 100px 10px 15px;
+                width: 100%;
 
                 &::-webkit-input-placeholder {
                     position: relative;
