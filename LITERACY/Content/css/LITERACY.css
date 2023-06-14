@@ -128,6 +128,36 @@ main .input_area .password_input { position: relative; width: 100%; }
 
 main .input_area .password_input .form-control { width: 100%; padding: 10px 100px 10px 15px; }
 
+main .select-wrap { width: 80%; position: relative; margin-left: 0 !important; }
+
+main .select-wrap .form-select { -webkit-appearance: none; color: #58391C; padding: 10px 40px 10px 12px; border: 1px solid #58391C; border-radius: 5px !important; line-height: 1.7; background-color: #fff; background-image: none; cursor: pointer; }
+
+main .select-wrap .form-select option { color: #58391C; padding: 5px 10px; }
+
+main .select-wrap .form-select option:hover { background: #ff904d !important; }
+
+main .select-wrap .form-select option:checked { box-shadow: 0 0 0px 100px #FF6000 inset; }
+
+main .select-wrap .form-select:focus { outline: none; border-color: #FF6000; border-radius: 5px; }
+
+main .select-wrap .form-select:required, main .select-wrap .form-select:invalid { color: #ADADAD; }
+
+main .select-wrap .select_icon { position: absolute; right: 12px; top: 10px; transform: translate(0, 0%); z-index: 11; pointer-events: none; user-select: none; transition: 0.3s; }
+
+main .select-wrap:focus-within .form-select { border-radius: 50%; position: absolute; right: 0; width: 100%; z-index: 10; overflow: scroll; overflow-x: hidden; }
+
+main .select-wrap:focus-within .form-select::-webkit-scrollbar-track { border-radius: 5px; background: transparent; }
+
+main .select-wrap:focus-within .form-select::-webkit-scrollbar { background: transparent; width: 10px; }
+
+main .select-wrap:focus-within .form-select::-webkit-scrollbar-thumb { border: none; box-shadow: none; background: #FF6000; min-height: 8px; border-radius: 5px; }
+
+main .select-wrap:focus-within .form-select option { color: #58391C; padding: 5px 10px; }
+
+main .select-wrap:focus-within .form-select option:disabled { display: none; }
+
+main .select-wrap:focus-within .select_icon { transform: rotate(180deg); }
+
 main .button { display: block; padding: 8px 10px; width: 100%; max-width: 500px; border-radius: 50px; border: 1px solid #FF6000; margin: 80px auto 30px; }
 
 main .button.solid_color { background-color: #FF6000; color: #fff; }
@@ -506,7 +536,7 @@ main .test_area .quiz_answer_area .answer_display_area .answer_display_area_item
 
 main .input_area { display: flex; align-items: flex-start; }
 
-main .input_area .input-group-label { padding: 10px 15px; color: #58391C; width: 100%; }
+main .input_area .input-group-label { padding: 10px 15px; color: #58391C; width: 100%; border: 1px solid transparent; }
 
 main .input_area .input_date_icon { position: absolute; right: 15px; top: 10px; z-index: 1; pointer-events: none; user-select: none; color: #58391C; }
 

@@ -49,7 +49,7 @@
                     <label class="input-group-label" for="inputGroupPassword">密碼</label>
                     <div class="password_input">
                         <input type="password" class="form-control input_password" id="inputGroupPassword"
-                        placeholder="請輸入你的密碼" />
+                            placeholder="請輸入你的密碼" />
                         <div class="input-group-text icon_eye">
                             <i class="fas fa-eye-slash"></i>
                         </div>
@@ -57,8 +57,48 @@
                 </div>
 
                 <div class="input_area">
-                    <label class="input-group-label" for="schoolName">學校名稱</label>
-                    <input type="text" id="schoolName" class="form-control" placeholder="請輸入學校名稱">
+                    <label class="input-group-label" for="country">學校名稱</label>
+                    <div class="select-wrap">
+                        <select id="country" name="country" class="form-select form-control">
+                            <option disabled selected>縣/市</option>
+                            <option value="1">基隆市</option>
+                            <option value="2">臺北市</option>
+                            <option value="3">新北市</option>
+                            <option value="4">桃園市</option>
+                            <option value="5">新竹市</option>
+                            <option value="6">新竹縣</option>
+                            <option value="7">苗栗縣</option>
+                            <option value="8">臺中市</option>
+                            <option value="9">彰化縣</option>
+                            <option value="10">南投縣</option>
+                            <option value="11">雲林縣</option>
+                            <option value="12">嘉義市</option>
+                            <option value="13">嘉義縣</option>
+                            <option value="14">臺南市</option>
+                            <option value="15">高雄市</option>
+                            <option value="16">屏東縣</option>
+                            <option value="17">臺東縣</option>
+                            <option value="18">花蓮縣</option>
+                            <option value="19">宜蘭縣</option>
+                            <option value="20">澎湖縣</option>
+                            <option value="21">金門縣</option>
+                            <option value="22">連江縣</option>
+                        </select>
+                        <div class="select_icon">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input_area">
+                    <label class="input-group-label">township</label>
+                    <div class="select-wrap">
+
+                        <select name="township" id="township" class="form-select form-control"></select>
+                        <div class="select_icon">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="input_area">
@@ -100,7 +140,7 @@
                     </div>
                 </div>
 
-                <button type="submit" class="button line_color">註冊</button>    
+                <button type="submit" class="button line_color">註冊</button>
             </form>
 
         </div>
@@ -116,6 +156,134 @@
 
     <!-- this page widgets JS -->
     <script src="Content/js/show_hide_password.js"></script>
+
+    <script>
+        // var country_arr = new Array("Afghanistan", "Albania", "Algeria", "American Samoa", "Angola", "Anguilla", "Antartica");
+
+        var s_a = new Array();
+        s_a[0] = "";
+        s_a[1] = "中正區|安樂區|七堵區|暖暖區|仁愛區|中山區|安樂區|信義區";
+        s_a[2] = "松山區|信義區|大安區|中山區|中正區|大同區|萬華區|文山區|南港區|內湖區|士林區|北投區";
+        s_a[3] = "板橋區|三重區|中和區|永和區|新莊區|新店區|樹林區|鶯歌區|三峽區|淡水區|汐止區|瑞芳區|土城區|蘆洲區|五股區|泰山區|林口區|深坑區|石碇區|坪林區|三芝區|石門區|八里區|平溪區|雙溪區|貢寮區|金山區|萬里區|烏來區";
+        s_a[4] = "桃園區|中壢區|大溪區|楊梅區|蘆竹區|大園區|龜山區|八德區|龍潭區|平鎮區|新屋區|觀音區|復興區";
+        s_a[5] = "桃園區|中壢區|大溪區";
+
+
+        $(document).ready(function () {
+            //Populate Select Items
+
+            $('#country').change(function () {
+                populateSelect(), populatePart();;
+            });
+            $('#Township').change(function () {
+                populatePart();
+            });
+
+            function populateSelect() {
+                Country = $('#country').val();
+                $('#Township').html('');
+
+                var TownshipElement = document.getElementById("township");
+
+
+                var Township_arr = s_a[Country].split("|");
+
+                for (var i = 0; i < Township_arr.length; i++) {
+                    TownshipElement.options[TownshipElement.length] = new Option(Township_arr[i]);
+                }
+
+                var SelectTownship = TownshipElement.length;
+                alert(SelectTownship);
+
+
+                //鄉鎮
+        if (SelectTownship > 10) {
+            $("#township").on({
+                "change": function () {
+                    $(this).blur();
+                },
+                'focus': function () {
+                    $(this).attr('size', 10);
+                },
+                "blur": function () {
+                    $(this).attr('size', 1);
+                },
+                "keyup": function (e) {
+                    if (e.keyCode == 27)
+                        $(this).attr('size', 10);
+                }
+            });
+        } else {
+            $("#township").on({
+                "change": function () {
+                    $(this).blur();
+                },
+                'focus': function () {
+                    $(this).attr('size', SelectTownship);
+                },
+                "blur": function () {
+                    $(this).attr('size', 1);
+                },
+                "keyup": function (e) {
+                    if (e.keyCode == 27)
+                        $(this).attr('size', SelectTownship);
+                }
+            });
+        }
+
+
+            }
+
+            function populatePart() {
+                Country = $('#country').val();
+                Township = $('#township').val();
+            }
+
+            
+        });
+
+
+        // 在「下拉式選單」做監聽事件
+
+        //縣市
+        var SelectCountry = $("select[id*=country]").children("option").length;
+        if (SelectCountry > 10) {
+            $("#country").on({
+                "change": function () {
+                    $(this).blur();
+                },
+                'focus': function () {
+                    $(this).attr('size', 10);
+                },
+                "blur": function () {
+                    $(this).attr('size', 1);
+                },
+                "keyup": function (e) {
+                    if (e.keyCode == 27)
+                        $(this).attr('size', 10);
+                }
+            });
+        } else {
+            $("#country").on({
+                "change": function () {
+                    $(this).blur();
+                },
+                'focus': function () {
+                    $(this).attr('size', SelectCountry - 1);
+                },
+                "blur": function () {
+                    $(this).attr('size', 1);
+                },
+                "keyup": function (e) {
+                    if (e.keyCode == 27)
+                        $(this).attr('size', SelectCountry - 1);
+                }
+            });
+        }
+        
+        
+
+    </script>
 </body>
 
 </html>
