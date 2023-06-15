@@ -260,7 +260,7 @@ main {
             &:focus-within {
                 .form-select {
                     border-radius: 50%;
-                    position: absolute;
+                    position: relative;
                     right: 0;
                     width: 100%;
                     z-index: 10;
@@ -388,6 +388,18 @@ input:-webkit-autofill:focus {
 
             .password_input {
                 width: 80%;
+            }
+
+            .select-wrap {
+                &:focus-within {
+                    .form-select {
+                        position: absolute;
+                    }
+        
+                    .select_icon {
+                        transform: rotate(180deg);
+                    }
+                }
             }
 
             .schoolName-select-wrap{

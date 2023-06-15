@@ -30,6 +30,21 @@ footer{
                         color: $main_color_brown;
                     }
                 }
+
+                &:hover{
+                    .bottom_menu_item_icon {
+        
+                        svg {
+                            color: $main_color;
+                        }
+                    }
+        
+                    .bottom_menu_item_text {
+                        p {
+                            color: $main_color;
+                        }
+                    }
+                }
             }
         }
     }

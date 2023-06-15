@@ -150,7 +150,7 @@ main .input_area .select-wrap .select_icon { position: absolute; right: 12px; to
 
 main .input_area .select-wrap:has(.form-select:focus) { z-index: 12; }
 
-main .input_area .select-wrap:focus-within .form-select { border-radius: 50%; position: absolute; right: 0; width: 100%; z-index: 10; overflow: scroll; overflow-x: hidden; }
+main .input_area .select-wrap:focus-within .form-select { border-radius: 50%; position: relative; right: 0; width: 100%; z-index: 10; overflow: scroll; overflow-x: hidden; }
 
 main .input_area .select-wrap:focus-within .form-select::-webkit-scrollbar-track { border-radius: 5px; background: transparent; }
 
@@ -188,6 +188,8 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   main .input_area .form-control.form-control-gender .radio-item { margin: 0 40px 0 0; }
   main .input_area .form-control.form-control-gender .radio-item label:before { margin: 0 10px 0 0; }
   main .input_area .password_input { width: 80%; }
+  main .input_area .select-wrap:focus-within .form-select { position: absolute; }
+  main .input_area .select-wrap:focus-within .select_icon { transform: rotate(180deg); }
   main .input_area .schoolName-select-wrap { width: 80%; }
   main .input_area .schoolName-select-wrap .select-wrap { width: 47.5%; } }
 
@@ -200,6 +202,10 @@ footer .bottom_menu .bottom_menu_item a .bottom_menu_item_icon { margin: 0 5px 0
 footer .bottom_menu .bottom_menu_item a .bottom_menu_item_icon svg { color: #58391C; }
 
 footer .bottom_menu .bottom_menu_item a .bottom_menu_item_text p { color: #58391C; }
+
+footer .bottom_menu .bottom_menu_item a:hover .bottom_menu_item_icon svg { color: #FF6000; }
+
+footer .bottom_menu .bottom_menu_item a:hover .bottom_menu_item_text p { color: #FF6000; }
 
 @media screen and (min-width: 768px) { footer .bottom_menu { padding: 20px 20px 60px; display: flex; }
   footer .bottom_menu .bottom_menu_item a { display: flex; margin: 10px 20px; }
