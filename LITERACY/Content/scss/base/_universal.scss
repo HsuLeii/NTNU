@@ -21,7 +21,7 @@ main {
             color: $main_color_brown;
             width: 100%;
             position: relative;
-            
+
             &.form-control-gender {
                 display: flex;
 
@@ -72,11 +72,11 @@ main {
                     content: "\f133";
                 }
 
-                svg{
+                svg {
                     position: absolute;
                     right: 15px;
                     top: 50%;
-                    transform: translate(0 , -50%);
+                    transform: translate(0, -50%);
                 }
 
                 .birthday_input {
@@ -86,7 +86,7 @@ main {
                     background-color: transparent;
                     position: relative;
                     z-index: 1;
-                    
+
                     &:valid {
                         border: 0;
                     }
@@ -185,107 +185,127 @@ main {
                 padding: 10px 100px 10px 15px;
             }
         }
-    }
 
-    .select-wrap {
-        width: 80%;
-        position: relative;
-        margin-left: 0 !important;
-
-        .form-select {
-            -webkit-appearance: none;
-            color: $main_color_brown;
-            padding: 10px 40px 10px 12px;
-            border: 1px solid $main_color_brown;
-            border-radius: 5px !important;
-            line-height: 1.7;
-            background-color: $white;
-            background-image: none;
-            cursor: pointer;
-
-            option {
-                color: $main_color_brown;
-                padding: 5px 10px;
-
-                &:hover {
-                    background: lighten($main_color, 15%) !important;
-                }
-
-                &:checked {
-                    box-shadow: 0 0 0px 100px $main_color inset;
-                }
-            }
-
-            &:focus {
-                outline: none;
-                border-color: $main_color;
-                border-radius: 5px;
-            }
-
-            &:required,
-            &:invalid {
-                color: $disabled;
-            }
-
-        }
-
-        .select_icon {
-            position: absolute;
-            right: 12px;
-            top: 10px;
-            transform: translate(0, 0%);
-            z-index: 11;
-            pointer-events: none;
-            user-select: none;
-            transition: 0.3s;
-        }
-
-        &:focus-within {
+        .select-wrap {
+            width: 80%;
+            position: relative;
+            margin-left: 0 !important;
+    
             .form-select {
-                border-radius: 50%;
-                position: absolute;
-                right: 0;
-                width: 100%;
-                z-index: 10;
-                overflow: scroll;
-                overflow-x: hidden;
-
-                &::-webkit-scrollbar-track
-{
-	border-radius: 5px;
-	background:transparent;
-}
-
-                &::-webkit-scrollbar {
-                    background: transparent;
-                    width: 10px;
-                }
-        
-                &::-webkit-scrollbar-thumb {
-                    border: none;
-                    box-shadow: none;
-                    background: $main_color;
-                    min-height: 8px;
-                    border-radius: 5px;
-                }
-
-
+                -webkit-appearance: none;
+                color: $main_color_brown;
+                padding: 10px 40px 10px 12px;
+                border: 1px solid $main_color_brown;
+                border-radius: 5px !important;
+                line-height: 1.7;
+                background-color: $white;
+                background-image: none;
+                cursor: pointer;
+    
                 option {
                     color: $main_color_brown;
                     padding: 5px 10px;
-
-                    &:disabled {
-                        display: none;
+    
+                    &:hover {
+                        background: lighten($main_color, 15%) !important;
+                    }
+    
+                    &:checked {
+                        box-shadow: 0 0 0px 100px $main_color inset;
                     }
                 }
+    
+                &:focus {
+                    outline: none;
+                    border-color: $main_color;
+                    border-radius: 5px;
+                }
+    
+                &:required,
+                &:invalid {
+                    color: $disabled;
+                }
+    
+            }
+    
+            .select_icon {
+                position: absolute;
+                right: 12px;
+                top: 10px;
+                transform: translate(0, 0%);
+                z-index: 11;
+                pointer-events: none;
+                user-select: none;
+                transition: 0.3s;
+                color: $main_color_brown;
             }
 
-            .select_icon {
-                transform: rotate(180deg);
+            &:has(.form-select:focus){
+                z-index: 12;
+              }
+    
+            &:focus-within {
+                .form-select {
+                    border-radius: 50%;
+                    position: absolute;
+                    right: 0;
+                    width: 100%;
+                    z-index: 10;
+                    overflow: scroll;
+                    overflow-x: hidden;
+    
+                    &::-webkit-scrollbar-track {
+                        border-radius: 5px;
+                        background: transparent;
+                    }
+    
+                    &::-webkit-scrollbar {
+                        background: transparent;
+                        width: 5px;
+                    }
+    
+                    &::-webkit-scrollbar-thumb {
+                        border: none;
+                        box-shadow: none;
+                        background: $main_color;
+                        min-height: 8px;
+                        border-radius: 5px;
+                    }
+    
+    
+                    option {
+                        color: $main_color_brown;
+                        padding: 5px 10px;
+    
+                        &:disabled {
+                            display: none;
+                        }
+                    }
+                }
+    
+                .select_icon {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        .schoolName-select-wrap{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+
+            .select-wrap{
+                width: 100%;
+                margin: 0 0 15px;
+
+                .form-control{
+                    width: 100%;
+                }
             }
         }
     }
-
+    
     .button {
         display: block;
         padding: 8px 10px;
@@ -355,6 +375,13 @@ input:-webkit-autofill:focus {
 
             .password_input {
                 width: 80%;
+            }
+
+            .schoolName-select-wrap{
+                width: 80%;
+                .select-wrap{
+                    width: 47.5%;
+                }
             }
         }
     }
