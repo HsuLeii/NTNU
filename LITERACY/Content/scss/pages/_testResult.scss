@@ -211,6 +211,10 @@ main {
 
                         p {
                             color: $white;
+
+                            svg{
+                                transition: 0.3s;
+                            }
                         }
 
                         &:hover{
@@ -576,13 +580,13 @@ main {
                         line-height: 1;
 
                         &.correct_answer_icon {
-                            i {
+                            svg {
                                 color: $correct_answer_color;
                             }
                         }
 
                         &.wrong_answer_icon {
-                            i {
+                            svg {
                                 color: $wrong_answer_color;
                             }
                         }
