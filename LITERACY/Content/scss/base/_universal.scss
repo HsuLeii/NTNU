@@ -5,10 +5,6 @@ body {
     background-image: linear-gradient(90deg, $body_line_color, 1px, transparent 0), linear-gradient($body_line_color, 1px, transparent 0);
 }
 
-input[type='date'], input[type='time'] {
-    -webkit-appearance: none;
-}
-
 main {
     .input_area {
         margin: 30px auto;
@@ -70,6 +66,15 @@ main {
             }
 
             &.form-control-birthday {
+                input{
+                    &::-webkit-datetime-edit-text,
+                    &::-webkit-datetime-edit-day-field,
+                    &::-webkit-datetime-edit-month-field,
+                    &::-webkit-datetime-edit-year-field {
+                        display: none;
+                    }
+                }
+                
 
                 i {
                     position: absolute;
@@ -83,9 +88,10 @@ main {
                     color: $main_color_brown;
                     width: 100%;
                     outline: 0;
-                    background-color: transparent;
+                    background-color: transparent !important;
                     position: relative;
                     z-index: 1;
+                    min-height: 1rem;
 
                     &:valid {
                         border: 0;
@@ -107,6 +113,8 @@ main {
                         cursor: pointer;
                     }
 
+
+
                     &:focus {
 
                         &~i{
@@ -120,6 +128,7 @@ main {
                             background-color: $main_color;
                             color: $white;
                             border: 0px;
+                            display: none;
                         }
                     }
 

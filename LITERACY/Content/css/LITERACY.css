@@ -76,8 +76,6 @@ body { background-color: #FFF6EB; }
 
 body { background-position: 50% 50%; background-size: 20px 20px; background-color: #FFF6EB; background-image: linear-gradient(90deg, #FFE7D3, 1px, transparent 0), linear-gradient(#FFE7D3, 1px, transparent 0); }
 
-input[type='date'], input[type='time'] { -webkit-appearance: none; }
-
 main .input_area { margin: 30px auto; display: flex; flex-direction: column; position: relative; }
 
 main .input_area .form-control { border-radius: 5px !important; margin-left: 0px !important; padding: 10px 15px; border: 1px solid #58391C !important; color: #58391C; width: 100%; position: relative; }
@@ -96,9 +94,11 @@ main .input_area .form-control.form-control-gender .radio-item input[type="radio
 
 main .input_area .form-control.form-control-gender .radio-item input[type="radio"]:checked + label:before { border: 2px solid #FF6000; background: radial-gradient(#FF6000 0%, #FF6000 40%, transparent 50%, transparent); }
 
+main .input_area .form-control.form-control-birthday input::-webkit-datetime-edit-text, main .input_area .form-control.form-control-birthday input::-webkit-datetime-edit-day-field, main .input_area .form-control.form-control-birthday input::-webkit-datetime-edit-month-field, main .input_area .form-control.form-control-birthday input::-webkit-datetime-edit-year-field { display: none; }
+
 main .input_area .form-control.form-control-birthday i { position: absolute; right: 15px; top: 50%; transform: translate(0, -50%); color: #58391C; }
 
-main .input_area .form-control.form-control-birthday .birthday_input { color: #58391C; width: 100%; outline: 0; background-color: transparent; position: relative; z-index: 1; }
+main .input_area .form-control.form-control-birthday .birthday_input { color: #58391C; width: 100%; outline: 0; background-color: transparent !important; position: relative; z-index: 1; min-height: 1rem; }
 
 main .input_area .form-control.form-control-birthday .birthday_input:valid { border: 0; }
 
@@ -108,7 +108,7 @@ main .input_area .form-control.form-control-birthday .birthday_input::-webkit-ca
 
 main .input_area .form-control.form-control-birthday .birthday_input:focus ~ i { color: #FF6000; }
 
-main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-text, main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-day-field, main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-month-field, main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-year-field { background-color: #FF6000; color: #fff; border: 0px; }
+main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-text, main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-day-field, main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-month-field, main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-year-field { background-color: #FF6000; color: #fff; border: 0px; display: none; }
 
 main .input_area .form-control::placeholder { color: #58391C; }
 
