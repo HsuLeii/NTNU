@@ -5,6 +5,9 @@ body {
     background-image: linear-gradient(90deg, $body_line_color, 1px, transparent 0), linear-gradient($body_line_color, 1px, transparent 0);
 }
 
+input[type='date'], input[type='time'] {
+    -webkit-appearance: none;
+}
 
 main {
     .input_area {
