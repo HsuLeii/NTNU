@@ -20,7 +20,7 @@ footer{
                 .bottom_menu_item_icon {
                     margin: 0 5px 0 0;
     
-                    svg {
+                    i {
                         color: $main_color_brown;
                     }
                 }
@@ -34,7 +34,7 @@ footer{
                 &:hover{
                     .bottom_menu_item_icon {
         
-                        svg {
+                        i {
                             color: $main_color;
                         }
                     }
@@ -56,28 +56,6 @@ footer{
     
         .bottom_menu {
             padding: 20px 20px 60px;
-            display: flex;
-
-            .bottom_menu_item {
-                a {
-                    display: flex;
-                    margin: 10px 20px;
-
-                    .bottom_menu_item_icon {
-                        margin: 0 15px 0 0;
-
-                        i {
-                            color: $main_color_brown;
-                        }
-                    }
-
-                    .bottom_menu_item_text {
-                        p {
-                            color: $main_color_brown;
-                        }
-                    }
-                }
-            }
         }
     }
 }

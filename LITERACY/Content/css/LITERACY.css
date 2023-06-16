@@ -94,7 +94,7 @@ main .input_area .form-control.form-control-gender .radio-item input[type="radio
 
 main .input_area .form-control.form-control-gender .radio-item input[type="radio"]:checked + label:before { border: 2px solid #FF6000; background: radial-gradient(#FF6000 0%, #FF6000 40%, transparent 50%, transparent); }
 
-main .input_area .form-control.form-control-birthday svg { position: absolute; right: 15px; top: 50%; transform: translate(0, -50%); color: #58391C; }
+main .input_area .form-control.form-control-birthday i { position: absolute; right: 15px; top: 50%; transform: translate(0, -50%); color: #58391C; }
 
 main .input_area .form-control.form-control-birthday .birthday_input { color: #58391C; width: 100%; outline: 0; background-color: transparent; position: relative; z-index: 1; }
 
@@ -104,7 +104,7 @@ main .input_area .form-control.form-control-birthday .birthday_input:required:in
 
 main .input_area .form-control.form-control-birthday .birthday_input::-webkit-calendar-picker-indicator { position: absolute; top: 0; left: 0; opacity: 0; width: 100%; height: 100%; cursor: pointer; }
 
-main .input_area .form-control.form-control-birthday .birthday_input:focus ~ svg { color: #FF6000; }
+main .input_area .form-control.form-control-birthday .birthday_input:focus ~ i { color: #FF6000; }
 
 main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-text, main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-day-field, main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-month-field, main .input_area .form-control.form-control-birthday .birthday_input:focus::-webkit-datetime-edit-year-field { background-color: #FF6000; color: #fff; border: 0px; }
 
@@ -114,19 +114,21 @@ main .input_area .form-control:focus { position: relative; z-index: 3; outline: 
 
 main .input_area .form-control:focus::placeholder { color: transparent; }
 
-main .input_area .form-control:placeholder-shown + .input-group-text svg { display: block; }
+main .input_area .form-control:placeholder-shown + .input-group-text i { display: block; }
 
 main .input_area .input-group-text { border: 0px; padding: 10px 15px; position: absolute; z-index: 1; left: 0; top: 50%; transform: translate(0, -50%); background-color: transparent; }
 
-main .input_area .input-group-text svg { color: #58391C; display: none; }
+main .input_area .input-group-text i { color: #58391C; display: none; }
 
 main .input_area .input-group-text.icon_eye { z-index: 4; right: 0; left: auto; cursor: pointer; }
 
-main .input_area .input-group-text.icon_eye svg { display: block; }
+main .input_area .input-group-text.icon_eye i { display: block; }
 
 main .input_area .password_input { position: relative; width: 100%; }
 
 main .input_area .password_input .form-control { width: 100%; padding: 10px 100px 10px 15px; }
+
+main .input_area .password_input .form-control:focus ~ .icon_eye i { color: #FF6000; }
 
 main .input_area .select-wrap { width: 80%; position: relative; margin-left: 0 !important; }
 
@@ -144,7 +146,7 @@ main .input_area .select-wrap .form-select:required, main .input_area .select-wr
 
 main .input_area .select-wrap .form-select:disabled { border: 1px solid #ADADAD !important; cursor: auto; color: #ADADAD; }
 
-main .input_area .select-wrap .form-select:disabled ~ .select_icon svg { color: #ADADAD; }
+main .input_area .select-wrap .form-select:disabled ~ .select_icon i { color: #ADADAD; }
 
 main .input_area .select-wrap .select_icon { position: absolute; right: 12px; top: 10px; transform: translate(0, 0%); z-index: 11; pointer-events: none; user-select: none; transition: 0.3s; color: #58391C; }
 
@@ -199,19 +201,15 @@ footer .bottom_menu .bottom_menu_item a { display: flex; margin: 10px 20px; }
 
 footer .bottom_menu .bottom_menu_item a .bottom_menu_item_icon { margin: 0 5px 0 0; }
 
-footer .bottom_menu .bottom_menu_item a .bottom_menu_item_icon svg { color: #58391C; }
+footer .bottom_menu .bottom_menu_item a .bottom_menu_item_icon i { color: #58391C; }
 
 footer .bottom_menu .bottom_menu_item a .bottom_menu_item_text p { color: #58391C; }
 
-footer .bottom_menu .bottom_menu_item a:hover .bottom_menu_item_icon svg { color: #FF6000; }
+footer .bottom_menu .bottom_menu_item a:hover .bottom_menu_item_icon i { color: #FF6000; }
 
 footer .bottom_menu .bottom_menu_item a:hover .bottom_menu_item_text p { color: #FF6000; }
 
-@media screen and (min-width: 768px) { footer .bottom_menu { padding: 20px 20px 60px; display: flex; }
-  footer .bottom_menu .bottom_menu_item a { display: flex; margin: 10px 20px; }
-  footer .bottom_menu .bottom_menu_item a .bottom_menu_item_icon { margin: 0 15px 0 0; }
-  footer .bottom_menu .bottom_menu_item a .bottom_menu_item_icon i { color: #58391C; }
-  footer .bottom_menu .bottom_menu_item a .bottom_menu_item_text p { color: #58391C; } }
+@media screen and (min-width: 768px) { footer .bottom_menu { padding: 20px 20px 60px; } }
 
 @media screen and (min-width: 1025px) { footer .bottom_menu { padding: 20px 20px; } }
 
@@ -287,27 +285,27 @@ main .test_area .function_btn_area { display: flex; justify-content: space-betwe
 
 main .test_area .function_btn_area .function_btn_item { width: 40px; height: 40px; display: flex; justify-content: center; align-items: center; border-radius: 50%; }
 
-main .test_area .function_btn_area .function_btn_item svg { font-size: 20px; }
+main .test_area .function_btn_area .function_btn_item i { font-size: 20px; }
 
 main .test_area .function_btn_area .function_btn_item.function_btn_item_circle_exclamation { background-color: #FFD1BC; }
 
-main .test_area .function_btn_area .function_btn_item.function_btn_item_circle_exclamation svg { color: #EE5007; }
+main .test_area .function_btn_area .function_btn_item.function_btn_item_circle_exclamation i { color: #EE5007; }
 
 main .test_area .function_btn_area .function_btn_item.function_btn_item_microphone { background-color: #3E215D; }
 
-main .test_area .function_btn_area .function_btn_item.function_btn_item_microphone svg { color: #fff; }
+main .test_area .function_btn_area .function_btn_item.function_btn_item_microphone i { color: #fff; }
 
 main .test_area .function_btn_area .function_btn_item.function_btn_item_play { background-color: #FFB800; }
 
-main .test_area .function_btn_area .function_btn_item.function_btn_item_play svg { color: #fff; }
+main .test_area .function_btn_area .function_btn_item.function_btn_item_play i { color: #fff; }
 
 main .test_area .function_btn_area .function_btn_item.function_btn_item_circle_check { background-color: #FFD7A9; }
 
-main .test_area .function_btn_area .function_btn_item.function_btn_item_circle_check svg { color: #5E3200; }
+main .test_area .function_btn_area .function_btn_item.function_btn_item_circle_check i { color: #5E3200; }
 
 main .test_area .function_btn_area .function_btn_item:disabled { background-color: #ADADAD; }
 
-main .test_area .function_btn_area .function_btn_item:disabled svg { color: #fff; }
+main .test_area .function_btn_area .function_btn_item:disabled i { color: #fff; }
 
 main .test_area .function_btn_area .function_btn_item:disabled ~ p { color: #ADADAD !important; }
 
@@ -326,7 +324,7 @@ main .test_area .function_btn_area .main_function_btn_area .main_function_btn_it
   main .test_area .test_topic_area { margin: 60px auto; }
   main .test_area .sound_bar_area { margin: 60px auto; }
   main .test_area .function_btn_area .function_btn_item { width: 50px; height: 50px; }
-  main .test_area .function_btn_area .function_btn_item svg { font-size: 25px; }
+  main .test_area .function_btn_area .function_btn_item i { font-size: 25px; }
   @keyframes sound { 0% { opacity: .55;
       height: 3px; }
     100% { opacity: 1;
@@ -396,7 +394,7 @@ main .test_area .literacy_diagnosis_area .literacy_diagnosis_report .literacy_di
 
 main .test_area .literacy_diagnosis_area .literacy_diagnosis_report .literacy_diagnosis_report_item .literacy_diagnosis_report_grade p { color: #fff; }
 
-main .test_area .literacy_diagnosis_area .literacy_diagnosis_report .literacy_diagnosis_report_item .literacy_diagnosis_report_grade p svg { transition: 0.3s; }
+main .test_area .literacy_diagnosis_area .literacy_diagnosis_report .literacy_diagnosis_report_item .literacy_diagnosis_report_grade p i { transition: 0.3s; }
 
 main .test_area .literacy_diagnosis_area .literacy_diagnosis_report .literacy_diagnosis_report_item .literacy_diagnosis_report_grade:hover.report_grade_btn.first_grade_label { background-color: #ff7001; }
 
@@ -528,9 +526,9 @@ main .test_area .quiz_answer_area .answer_display_area .answer_display_area_item
 
 main .test_area .quiz_answer_area .answer_display_area .answer_display_area_item .answer_icon { position: absolute; right: 5px; bottom: 5px; line-height: 1; }
 
-main .test_area .quiz_answer_area .answer_display_area .answer_display_area_item .answer_icon.correct_answer_icon svg { color: #5E3200; }
+main .test_area .quiz_answer_area .answer_display_area .answer_display_area_item .answer_icon.correct_answer_icon i { color: #5E3200; }
 
-main .test_area .quiz_answer_area .answer_display_area .answer_display_area_item .answer_icon.wrong_answer_icon svg { color: #EE5007; }
+main .test_area .quiz_answer_area .answer_display_area .answer_display_area_item .answer_icon.wrong_answer_icon i { color: #EE5007; }
 
 @media screen and (min-width: 768px) { main .test_area .test_badge_area { width: 380px; margin: 60px auto; }
   main .test_area .test_badge_area .badge_inner_layer .badge_score p { font-size: 125px; }

@@ -192,14 +192,14 @@ main {
                 align-items: center;
                 border-radius: 50%;
                 
-                svg {
+                i {
                     font-size: 20px;
                 }
 
                 &.function_btn_item_circle_exclamation {
                     background-color: $wrong_answer_bg;
 
-                    svg {
+                    i {
                         color: $wrong_answer_color;
                     }
                 }
@@ -207,7 +207,7 @@ main {
                 &.function_btn_item_microphone {
                     background-color: $microphone_color;
 
-                    svg {
+                    i {
                         color: $white;
                     }
                 }
@@ -215,7 +215,7 @@ main {
                 &.function_btn_item_play {
                     background-color: $play_color;
 
-                    svg {
+                    i {
                         color: $white;
                     }
                 }
@@ -223,7 +223,7 @@ main {
                 &.function_btn_item_circle_check {
                     background-color: $correct_answer_bg;
 
-                    svg {
+                    i {
                         color: $correct_answer_color;
                     }
                 }
@@ -231,7 +231,7 @@ main {
                 &:disabled{
                     background-color: $disabled;
 
-                    svg{
+                    i{
                         color: $white;
                     }
 
@@ -293,7 +293,7 @@ main {
                     width: 50px;
                     height: 50px;
                     
-                    svg {
+                    i {
                         font-size: 25px;
                     }
                 }

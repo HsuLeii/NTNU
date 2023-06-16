@@ -212,7 +212,7 @@ main {
                         p {
                             color: $white;
 
-                            svg{
+                            i{
                                 transition: 0.3s;
                             }
                         }
@@ -580,13 +580,13 @@ main {
                         line-height: 1;
 
                         &.correct_answer_icon {
-                            svg {
+                            i {
                                 color: $correct_answer_color;
                             }
                         }
 
                         &.wrong_answer_icon {
-                            svg {
+                            i {
                                 color: $wrong_answer_color;
                             }
                         }
