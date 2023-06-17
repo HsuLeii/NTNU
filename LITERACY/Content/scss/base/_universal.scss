@@ -66,14 +66,14 @@ main {
             }
 
             &.form-control-birthday {
-                input{
-                    &::-webkit-datetime-edit-text,
-                    &::-webkit-datetime-edit-day-field,
-                    &::-webkit-datetime-edit-month-field,
-                    &::-webkit-datetime-edit-year-field {
-                        display: none;
-                    }
-                }
+                // input{
+                //     &::-webkit-datetime-edit-text,
+                //     &::-webkit-datetime-edit-day-field,
+                //     &::-webkit-datetime-edit-month-field,
+                //     &::-webkit-datetime-edit-year-field {
+                //         display: none;
+                //     }
+                // }
                 
 
                 i {
@@ -91,7 +91,7 @@ main {
                     background-color: transparent !important;
                     position: relative;
                     z-index: 1;
-                    min-height: 1rem;
+                    // min-height: 1rem;
 
                     &:valid {
                         border: 0;
