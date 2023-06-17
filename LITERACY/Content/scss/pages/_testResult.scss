@@ -112,6 +112,10 @@ main {
                     background-color: lighten($main_color, 15%);
                     color: $main_color_brown;
                     padding: 5px 10px;
+
+                    .label{
+                        font-size: 18px;
+                    }
                 }
 
                 .ribbon_sides {
@@ -636,6 +640,10 @@ main {
 
                     .ribbon_text {
                         font-size: 30px;
+
+                        label{
+                            font-size: 30px;
+                        }
                     }
 
                     .ribbon_sides {

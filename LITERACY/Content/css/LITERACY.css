@@ -360,6 +360,8 @@ main .test_area .test_badge_area .ribbon_area { min-width: 240px; position: abso
 
 main .test_area .test_badge_area .ribbon_area .ribbon_text { font-size: 18px; text-align: center; font-weight: bold; background-color: #ff904d; color: #58391C; padding: 5px 10px; }
 
+main .test_area .test_badge_area .ribbon_area .ribbon_text .label { font-size: 18px; }
+
 main .test_area .test_badge_area .ribbon_area .ribbon_sides { border: 18px solid #ff904d; position: absolute; bottom: 0; z-index: -1; }
 
 main .test_area .test_badge_area .ribbon_area .ribbon_sides::before { content: ""; border-color: #cc4d00 transparent transparent transparent; position: absolute; border-style: solid; }
@@ -536,6 +538,7 @@ main .test_area .quiz_answer_area .answer_display_area .answer_display_area_item
   main .test_area .test_badge_area .badge_outer_layer .badge_outer_item { width: 280px; height: 280px; }
   main .test_area .test_badge_area .ribbon_area { min-width: 380px; }
   main .test_area .test_badge_area .ribbon_area .ribbon_text { font-size: 30px; }
+  main .test_area .test_badge_area .ribbon_area .ribbon_text label { font-size: 30px; }
   main .test_area .test_badge_area .ribbon_area .ribbon_sides { border: 30px solid #ff904d; }
   main .test_area .test_badge_area .ribbon_area .ribbon_sides.ribbon_area_left { border-left: 30px solid #F3F3F3; }
   main .test_area .test_badge_area .ribbon_area .ribbon_sides.ribbon_area_left::before { border-width: 30px 0 0 30px; }
