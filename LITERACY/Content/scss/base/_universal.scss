@@ -91,9 +91,6 @@ main {
                     background-color: transparent !important;
                     position: relative;
                     z-index: 1;
-                    display: block;
-  text-align: left;
-  text-align: -webkit-left;
 
                     &:valid {
                         border: 0;
@@ -381,6 +378,9 @@ input:-webkit-autofill:focus {
     -webkit-text-fill-color: $main_color_brown;
     -webkit-box-shadow: 0 0 0px 1000px $white inset !important;
 }
+
+	
+input::-webkit-date-and-time-value{ text-align:left; }
 
 @media screen and (min-width: 576px) {}
 
