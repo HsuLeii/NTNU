@@ -92,6 +92,8 @@ main {
                     position: relative;
                     z-index: 1;
                     text-align: left;
+                    display: flex;
+                    justify-content: flex-start;
 
                     &:valid {
                         border: 0;
