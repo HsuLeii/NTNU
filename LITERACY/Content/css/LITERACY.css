@@ -96,7 +96,7 @@ main .input_area .form-control.form-control-gender .radio-item input[type="radio
 
 main .input_area .form-control.form-control-birthday i { position: absolute; right: 15px; top: 50%; transform: translate(0, -50%); color: #58391C; }
 
-main .input_area .form-control.form-control-birthday .birthday_input { color: #58391C; width: 100%; outline: 0; background-color: transparent !important; position: relative; z-index: 1; }
+main .input_area .form-control.form-control-birthday .birthday_input { color: #58391C; width: 100%; outline: 0; background-color: transparent !important; position: relative; z-index: 1; text-align: left; }
 
 main .input_area .form-control.form-control-birthday .birthday_input:valid { border: 0; }
 
