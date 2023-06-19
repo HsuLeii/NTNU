@@ -91,9 +91,9 @@ main {
                     background-color: transparent !important;
                     position: relative;
                     z-index: 1;
-                    text-align: left;
-                    display: flex;
-                    justify-content: flex-start;
+                    display: block;
+  text-align: left;
+  text-align: -webkit-left;
 
                     &:valid {
                         border: 0;
