@@ -98,6 +98,8 @@ main .input_area .form-control.form-control-birthday i { position: absolute; rig
 
 main .input_area .form-control.form-control-birthday .birthday_input { color: #58391C; width: 100%; outline: 0; background-color: transparent !important; position: relative; z-index: 1; }
 
+main .input_area .form-control.form-control-birthday .birthday_input::-webkit-date-and-time-value { text-align: left; }
+
 main .input_area .form-control.form-control-birthday .birthday_input:valid { border: 0; }
 
 main .input_area .form-control.form-control-birthday .birthday_input:required:invalid::-webkit-datetime-edit { color: transparent; }
@@ -185,8 +187,6 @@ main .button.line_color:hover { color: #fff; background-color: #FF6000; }
 main .button.button_register { margin: 0px auto; }
 
 input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus { border: 1px solid #58391C; -webkit-text-fill-color: #58391C; -webkit-box-shadow: 0 0 0px 1000px #fff inset !important; }
-
-input::-webkit-date-and-time-value { text-align: left; }
 
 @media screen and (min-width: 768px) { main .input_area .form-control.form-control-gender { border: 1px solid transparent !important; background-color: transparent; }
   main .input_area .form-control.form-control-gender .radio-item { margin: 0 40px 0 0; }
