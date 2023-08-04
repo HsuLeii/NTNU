@@ -12,6 +12,23 @@ main {
         flex-direction: column;
         position: relative;
 
+        input{
+            &:read-only {
+                border: 0px solid $main_color_brown !important;
+                background-color: transparent;
+                cursor: auto;
+                &:focus {
+                    border: 0px solid $main_color_brown !important;
+                    color: $main_color_brown;
+                    box-shadow: none;
+    
+                    &::placeholder {
+                        color: transparent;
+                    }
+                }
+              }
+        }
+
         .form-control {
             border-radius: 5px !important;
             margin-left: 0px !important;
@@ -114,8 +131,6 @@ main {
                         cursor: pointer;
                     }
 
-
-
                     &:focus {
 
                         &~i{
@@ -152,7 +167,7 @@ main {
                     color: transparent;
                 }
             }
-
+            
             &:placeholder-shown {
                 &+.input-group-text {
                     i {
@@ -244,7 +259,7 @@ main {
     
                 &:required,
                 &:invalid {
-                    color: $disabled;
+                    color: $main_color_brown;
                 }
 
                 &:disabled{
@@ -323,14 +338,14 @@ main {
         }
 
         .schoolName-select-wrap{
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
+            display: block;
             width: 100%;
 
             .select-wrap{
+                display: inline-block;
                 width: 100%;
                 margin: 0 0 15px;
+                vertical-align: text-top;
 
                 .form-control{
                     width: 100%;
@@ -426,6 +441,10 @@ input:-webkit-autofill:focus {
                 width: 80%;
                 .select-wrap{
                     width: 47.5%;
+
+                    &:nth-child(1){
+                        margin: 0 2.5% 15px 0;
+                    }
                 }
             }
         }

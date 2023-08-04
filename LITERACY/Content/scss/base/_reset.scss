@@ -95,7 +95,8 @@ img {
     width: 100%;
 }
 
-button {
+button,
+.btn {
     font-size: 16px;
     line-height: 1.7;
     padding: 0;
@@ -197,7 +198,8 @@ body {
         font-size: 20px;
     }
 
-    button {
+    button,
+    .btn {
         font-size: 20px;
     }
 }

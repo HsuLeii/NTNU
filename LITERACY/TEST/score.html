@@ -252,8 +252,7 @@
                 
             </div>
 
-            <button type="submit" class="button solid_color">檢視</button>
-
+            <button type="submit" data-bs-target="#alertModal" data-bs-toggle="modal" class="button solid_color">檢視</button>
         </div>
     </main>
 
@@ -279,6 +278,28 @@
             $(this).addClass("check_item");
         })
     </script>
+
+      <!-- 請選擇要查看的項目modal開始 -->
+  <div class="modal fade" id="alertModal" tabindex="-1" aria-modal="true" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="text-end">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="text-center modal_text">
+            <p>請選擇要查看的項目。</p>
+          </div>
+          <div class="text-center">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                確定
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 請選擇要查看的項目modal結束 -->
 </body>
 
 </html>

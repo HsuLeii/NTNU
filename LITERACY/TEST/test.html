@@ -99,7 +99,8 @@
                     </p>
                 </div>
             </div>
-            <button class="function_btn_item function_btn_item_circle_check">
+
+            <button type="button" data-bs-target="#alertModal" data-bs-toggle="modal" class="function_btn_item function_btn_item_circle_check">
                 <i class="fa-solid fa-file-circle-check"></i>
             </button>
         </div>
@@ -123,6 +124,26 @@
       $("footer").load("footer.html", function () {});
     });
   </script>
+
+<!-- 請錄製音檔modal開始 -->
+<div class="modal fade" id="alertModal" tabindex="-1" aria-modal="true" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="text-end">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="text-center">
+            <p>請錄製音檔。</p>
+          </div>
+          <div class="text-center">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">確定</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 請錄製音檔modal結束 -->
 </body>
 
 </html>
